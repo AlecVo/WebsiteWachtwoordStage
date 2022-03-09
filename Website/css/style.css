@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    
+}
+body{
+    color: black;
+}
+h1{
+    font-size: 52px;
+    text-align: center;
+    margin-top: 50px;
+}
+h2{
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+#contactpagina p{
+    font-size: 20;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+/* Begin styling navbar */
+.nav-parent{
+    background-color: #dadada;
+    padding: 30px;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+.nav-flex,.nav-links{
+    display: flex;
+}
+.nav-logo{
+    color: black;
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-size: 32px;
+    margin: auto;
+}
+.nav-logo a{
+    color: black;
+}
+.nav-logo a:hover{
+    color: rgb(91, 48, 160);
+}
+.nav-link{
+    margin: auto;
+    text-align: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-left: 15px;
+}
+.nav-link a{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 500; 
+    transition: all 0.3s ease;
+    
+}
+
+.nav-link a:hover{
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    background-color: rgb(91, 48, 160);
+}
+@media only screen and (max-width: 600px) {
+    .nav-link{
+        display: none;
+    }
+}
+/* Einde styling navbar */
+
+/* Begin styling footer */
+
+footer{
+    background-color: #dadada;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2rem;
+}
+#footer i {
+    margin-right: 20px;
+}
+#footer li {
+    margin-bottom:10px;
+}
+#footer h4{
+    margin-bottom: 10px;
+}
+#footer a :hover{
+    color: black;
+    opacity: 0.2;
+}
+/* Einde styling footer */
+
+/* Begin styling Contact pagina */
+iframe{
+    height: 400px;
+    width: 200px;
+}
+.contact-parent{
+    margin: 7% 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+.contact-map{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.contact-map iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+@media only screen and (max-width: 1200px) {
+    .contact-parent{
+        grid-template-columns: 1fr;
+    }
+    h1{
+        font-size: 42px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    h1,h2,p{
+        text-align: center;
+    }
+  }
+/* einde styling Contact pagina */
+
