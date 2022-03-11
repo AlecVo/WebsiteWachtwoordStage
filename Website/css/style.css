@@ -38,7 +38,7 @@ h2{
 .nav-flex,.nav-links{
     display: flex;
 }
-.nav-logo{
+.nav-logo, .footer-logo i{
     color: black;
     flex-shrink: 0;
     flex-grow: 0;
@@ -86,23 +86,64 @@ footer{
     background-color: #dadada;
     width: 100%;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3% 15%;
+    flex-wrap: wrap;
+    align-self: center;
 }
-#footer i {
-    margin-right: 20px;
+.social-links i {
+    margin-right: 10px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 40%;
+    border: #000 2px solid;
 }
-#footer li {
+.social-links i:hover{
+    margin-right: 10px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 40%;
+    border: white 2px solid;
+    color: white;
+}
+#footer li,h4 {
     margin-bottom:10px;
 }
-#footer h4{
-    margin-bottom: 10px;
+.footer-logo p {
+    padding-top: 10px;
 }
-#footer a :hover{
-    color: black;
-    opacity: 0.2;
+footer a{
+    color: #000;
 }
+footer a:hover{
+    color: rgb(91, 48, 160);
+    transition: 0.2s;
+}
+footer ul li :hover{
+    margin-left: 4px;
+}
+footer h4, .logo{
+    text-transform: uppercase;
+}
+@media only screen and (max-width: 1200px) {
+    footer{
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding-top: 20px;
+    }
+    footer h4{
+        padding-top: 10px;
+    }
+    footer p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    footer i {
+        padding-left: 10px;
+    }
+  }
 /* Einde styling footer */
 
 /* Begin styling Contact pagina */
@@ -139,9 +180,48 @@ iframe{
     h2{
         font-size: 26px;
     }
-    h1,h2,p{
+    h1,h2{
         text-align: center;
+    }
+    #contactpagina p {
+        text-align: center
     }
   }
 /* einde styling Contact pagina */
+
+/* Begin styling Privacy pagina */
+  #privacy{
+      margin: 3% 20%;
+  }
+  #privacy h2{
+      text-align: center;
+  }
+  #privacy p{
+      padding-top: 10px;
+      text-align: justify;
+      padding: 0 20px;
+      max-width: 450px;
+  }
+  .privacy-test{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 0;
+  }
+  .privacy-parent{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+
+  }
+/* Einde styling Privacy pagina */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80%;
+    justify-content: center;
+    align-content: center;
+}
 
