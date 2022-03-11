@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/Style.css"></link>
+  <link rel="stylesheet" href="css/home-style.css"></link>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="script/script.js"></script>
   <link rel="icon" type="image/x-icon" href="img/icon.jpg">
@@ -15,7 +16,7 @@
     <div class="pagina-padding">
         <!-- Dit is de navbar -->
         <nav id="navbar" class="flex-container-item">
-          <div class="nav-parent">
+          <div class="nav-parent" id="myTopNav">
             <div class="nav-logo">
               <a class="logo" href="Home.html"><i class="fa fa-key logo"> SecureSend</i></a>
             </div>
@@ -33,9 +34,80 @@
           </div>
         </nav>
       <!-- Einde van de navbar -->
+        <hero id="hero" class="flex-container-item">
+          <div class="hero-parent">
+            <div class="hero-item">
+              <div>
+                <h1>SecureSend</h1>
+                <h4>Verstuur je berichten veilig nu naar wie je wil!</h4>
+                <div class="cards">
+                  <div class="card">
+                    <div class="icon-background"><i class="fa fa-lock"></i></div>
+                    <h5>Encrypted</h5>
+                    <p>Alle berichten worden voordat ze verzonden worden eerst extra beveiligd met encryprie</p>
+                  </div>
+                  <div class="card">
+                    <div class="icon-background"><i class="fa fa-trash"></i></div>
+                    <h5>Verwijder</h5>
+                    <p> optio nihil pariatur nostrum assumenda maxime magni ad doloremque animi. Numquam, molestiae.</p>
+                  </div>
+                  <div class="card">
+                    <div class="icon-background"><i class="fa fa-exchange"></i></div>
+                    <h5>Deel info</h5>
+                    <p> ipsum velit omnis suscipit nihil veniam placeat ratione dolore architecto reiciendis! Cumque repellendus possimus reiciendis.</p>
+                  </div>
+                  <div class="card">
+                    <div class="icon-background"><i class="fa fa-book"></i></div>
+                    <h5>Open source</h5>
+                    <p> Qui perferendis doloremque ducimus, tenetur aliquam blanditiis atque ad reiciendis numquam at veritatis.</p>
+                  </div>
+                </div>
+                <div class="icon-background">
+                  <i class="fa fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
 
-
-
+            <div id="verstuur" class="hero-item">
+              <h2>Laten we jouw berichten versturen</h2>
+              <div class="verstuur-parent">
+                <div class="verstuur-item">
+                  <img src="img/image.jpg"></img>
+                </div>
+                  <div class="verstuur-item">
+                    <div>
+                      <div class="bericht">
+                        <h5>Jouw geheim bericht:</h5>
+                        <textarea placeholder="Vul hier jouw bericht in ..."></textarea>
+                      </div>
+                      <div class="datum-item">
+                          <h5>Vervalt:</h5>
+                          <select name="datum" id="vervalDatum">
+                            <option value="druk">Na drukken op link</option>
+                            <option value="uur">Na 1 uur</option>
+                            <option value="dag">Na 1 dag</option>
+                            <option value="week">Na 1 week</option>
+                          </select>
+                    </div>
+                    <div class="wachtwoord-item">
+                      <div class="flex">
+                        <h5>Wachtwoord op de link?</h5>
+                        <label class="checkbox">
+                          <input type="checkbox" checked="unchecked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="uitlijning">
+                      <input class="wachtwoord" placeholder="Wachtwoord" type="password" id="pass" name="password">
+                      <button>Creër link</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </hero>
             <!-- Begin footer -->
             <footer id="footer" class="flex-container-item">
               <div class="footer-logo">

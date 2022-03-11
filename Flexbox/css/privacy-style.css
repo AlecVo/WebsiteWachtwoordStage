@@ -14,21 +14,24 @@ h2{
 .privacy-verdeelt{
   display: flex;
   flex-wrap: wrap;
+  
   gap: 40px 0;
 }
 .privacy-parent{
     display: flex;
-    justify-content: center;
     align-items: center;
-    align-content: center;
     flex-direction: column;
 
 }
 @media only screen and (max-width: 1068px) {
-    #privacy{
-        display: block;
-        margin: 0 auto;
+    .privacy-item{
+        align-self: center;
     }
+    .privacy-verdeelt{
+        justify-content: center;
+      }
   }
-
+footer{
+    margin-top: 30px;
+}
 /* Einde styling Privacy pagina */

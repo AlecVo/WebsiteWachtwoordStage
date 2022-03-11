@@ -2,56 +2,55 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 }
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
 }
+
 a{
     color: black;
 }
 h1{
-    font-size: 32px;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 0;
 }
 h2{
-    font-size: 26px;
+    font-size: 20px !important;
 }
 h3{
-    font-size: 22px;
+    font-size: 18px !important;
 }
 h4{
-    font-size: 20px;
+    font-size: 14px !important;
 }
 p,li,a{
     text-decoration: none;
 }
-
 .flex-container{
     display: flex;
     width: 100%;
     margin: 0 auto;
-    border: 30px solid green;
     flex-direction: column;
     max-width: 1280px;
+    background-color: #f1f2f4;
 }
 .pagina-padding{
     padding: 0 5vw;
 }
-.flex-container-item{
-    border: 10px solid blue;
-}
-
 /* Begin styling navbar */
 .nav-parent{
     background-color: #dadada;
-    padding: 20px;
-
+    padding: 10px;
     display:flex;
     justify-content: space-between;
 }
 .nav-logo{
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
     flex-shrink: 0;
     flex-grow: 0;
@@ -63,12 +62,14 @@ p,li,a{
 }
 .nav-links{
     display: flex;
+    align-self: center;
 }
 .nav-link a, li{
     text-decoration: none;
     list-style-type: none;
     padding-right: 15px;
     margin: auto;
+    font-size: 0.8rem;
 }
 .nav-link{
     flex-shrink: 0;
@@ -96,14 +97,19 @@ p,li,a{
 /* Einde styling navbar */
 
 /* Begin styling footer */
-
 footer{
     background-color: #dadada;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 100px;
+}
+.footer-logo{
+    margin: auto 0;
+}
+.footer-follow, .footer-sitemap,.footer-contact{
+    margin-top: 20px;
 }
 .social-links i {
     margin-right: 10px;
@@ -125,12 +131,11 @@ footer{
 }
 .footer-logo a{
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
     flex-shrink: 0;
     flex-grow: 0;
 }
-
 footer a:hover{
     color: rgb(91, 48, 160);
     transition: color 0.2s;
@@ -142,12 +147,17 @@ footer ul li :hover{
 footer h4, .logo{
     text-transform: uppercase;
 }
+#footer p{
+    font-size: 11px;
+}
 @media only screen and (max-width: 1200px) {
     footer{
         display: flex;
-        text-align: center;
         flex-direction: column;
         padding-top: 20px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
     }
     footer h4{
         padding-top: 10px;
@@ -155,6 +165,7 @@ footer h4, .logo{
     footer p {
         padding-top: 10px;
         padding-bottom: 10px;
+        text-align: center;
     }
   }
 /* Einde styling footer */

@@ -1,0 +1,43 @@
+.overons-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.overons-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.foto{
+    display: flex;
+    justify-content: center;
+}
+.rechts{
+    display: flex;
+    align-self: flex-end;
+}
+img{
+    width: 100%;
+    height: auto;
+    align-self: center;
+    max-height: 500px;
+}
+
+p{
+   text-align: justify;
+   max-width: 400px;
+   margin: 15px 0;
+}
+
+@media screen and (max-width: 850px) {
+    .overons-item {
+        flex-direction: column;
+    }
+    .overons-item, .rechts{
+        align-self: center;
+    }
+    .mt-3{
+        margin-top: 30px;
+    }
+}
