@@ -1,9 +1,12 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "nav-parent") {
-    x.className += " responsive";
-  } else {
-    x.className = "nav-parent";
-  }
-}
+const burger = document.querySelector(".burger")
+const navMenu = document.querySelector(".nav-menu")
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+  burger.classList.remove("active");
+  navMenu.classList.remove("active");
+}))
