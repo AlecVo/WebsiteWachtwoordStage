@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/Style.css"></link>
   <link rel="stylesheet" href="css/home-style.css"></link>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
   <script src="script/script.js"></script>
   <link rel="icon" type="image/x-icon" href="img/icon.jpg">
   <title>SecureSend</title>
@@ -16,26 +18,24 @@
     <div class="pagina-padding">
         <!-- Dit is de navbar -->
         <nav id="navbar" class="flex-container-item">
-          <a href="" class="nav-brand">SecureSend</a>
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <a href="" class="nav-link">Home</a>
+          <ul>
+            <li class="logo"><a href="">SecureSend</a></li>
+            <li class="item">
+              <a href="">Home</a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Over Ons</a>
+            <li class="item">
+              <a href="">Over Ons</a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">PrivacyPolicy</a>
+            <li class="item">
+              <a href="">PrivacyPolicy</a>
             </li>
-            <li class="nav-item">
-              <a href="" class="nav-link">Contact</a>
+            <li class="item">
+              <a href="">Contact</a>
+            </li>
+            <li class="burger">
+              <a href=""><i class="fas fa-bars"></i></a>
             </li>
           </ul>
-          <div class="burger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
         </nav>
       <!-- Einde van de navbar -->
         <hero id="hero" class="flex-container-item">
@@ -56,7 +56,7 @@
                     <p> optio nihil pariatur nostrum assumenda maxime magni ad doloremque animi. Numquam, molestiae.</p>
                   </div>
                   <div class="card">
-                    <div class="icon-background"><i class="fa fa-exchange"></i></div>
+                    <div class="icon-background"><i class="fa fa-arrows-h"></i></div>
                     <h5>Deel info</h5>
                     <p> ipsum velit omnis suscipit nihil veniam placeat ratione dolore architecto reiciendis! Cumque repellendus possimus reiciendis.</p>
                   </div>
@@ -149,6 +149,13 @@
             <!-- Einde footer -->
     </div>
   </div>
-
+<script>
+  $(document).ready(function(){
+    $('.burger').click(function(){
+      $('.item').toggleClass("show");
+      $('ul li').toggleClass("hide");
+    });
+  });
+</script>
 </body>
 </html>

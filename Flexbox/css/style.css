@@ -43,6 +43,79 @@ p,li,a{
     padding: 0 5vw;
 }
 /* Begin styling navbar */
+nav{
+    background-color: #dadada;
+    padding: 5px 40px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li {
+    padding: 15px 0;
+    font-size: 23px;
+}
+nav ul li:hover a{
+    color: rgb(91, 48, 160);
+}
+nav ul li.logo{
+    flex: 1;
+    font-weight: 500px;
+    font-size: 23px;
+    user-select: none;
+}
+nav ul li.item {
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    order: 3;
+    position: relative;
+}
+nav ul li.item:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: rgb(91, 48, 160);
+    left: 0;
+    bottom: 10px;
+    opacity: 0;
+    transition: 0.2s linear;
+}
+nav ul li.item:hover:after{
+    opacity: 1;
+}
+nav ul li a{
+    color: black;
+    font-size: 18px;
+}
+nav ul li.burger{
+    display: none;
+}
+nav ul li.burger.hide i:before{
+    content: '\f00d';
+}
+@media(max-width:768px){
+    nav{
+        padding: 5px 30px;
+    }
+    nav ul li.item{
+        width: 100%;
+        display: none;
+    }
+    nav .item.show{
+        display: block;
+    }
+    nav ul li.burger{
+        display: block;
+    }
+
+}
+
+/* DLSDSD1
     #navbar{
         min-height: 70px;
         display: flex;
@@ -98,22 +171,22 @@ p,li,a{
         }
         .nav-menu{
             position: fixed;
-            left: -100%;
             top: 70px;
             gap: 0;
             flex-direction: column;
             background-color: #dadada;
-            width: 100%;
+            width: 90%;
             text-align: center;
             transition: 0.3s;
         }
         .nav-item{
             margin: 16px 0;
+            display: block;
         }
         .nav-menu.active{
             left: 0;
         }
-    }
+    } */
 
 
 /* Einde styling navbar */
