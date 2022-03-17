@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="../css/Style.css"></link>
   <link rel="stylesheet" href="../css/contact-style.css"></link>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
   <link rel="icon" type="image/x-icon" href="../img/icon.jpg">
-  <script src="../script/script.js"></script>
   <title>SecureSend</title>
 </head>
 <body>
@@ -19,20 +19,20 @@
         <nav id="navbar" class="flex-container-item">
           <ul>
             <li class="logo"><a href="../Home.html">SecureSend</a></li>
-            <li class="item">
+            <li :class="{show:showNav, hide:!showNav}" class="item">
               <a href="../Home.html">Home</a>
             </li>
-            <li class="item">
+            <li :class="{show:showNav, hide:!showNav}" class="item">
               <a href="OverOns.html">Over Ons</a>
             </li>
-            <li class="item">
+            <li :class="{show:showNav, hide:!showNav}" class="item">
               <a href="PrivacyPolicy.html">PrivacyPolicy</a>
             </li>
-            <li class="item">
+            <li :class="{show:showNav, hide:!showNav}" class="item">
               <a href="Contact.html">Contact</a>
             </li>
             <li class="burger">
-              <a><i class="fas fa-bars"></i></a>
+              <a><i @click="burgerToggle()" class="fas fa-bars"></i></a>
             </li>
           </ul>
         </nav>
@@ -100,13 +100,6 @@
       <!-- Einde footer -->
     </div>
   </div>
-  <script>
-    $(document).ready(function(){
-      $('.burger').click(function(){
-        $('.item').toggleClass("show");
-        $('ul li').toggleClass("hide");
-      });
-    });
-  </script>
+  <script src="../script/script.js"></script>
 </body>
 </html>

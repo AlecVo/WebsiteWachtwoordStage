@@ -1,0 +1,38 @@
+/* Begin styling Privacy pagina */
+#privacy h2,h1{
+    text-align: center;
+}
+h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#privacy p{
+    text-align: justify;
+    padding: 0 20px;
+    max-width: 450px;
+}
+.privacy-verdeelt{
+  display: flex;
+  flex-wrap: wrap;
+  
+  gap: 40px 0;
+}
+.privacy-parent{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+@media only screen and (max-width: 1068px) {
+    .privacy-item{
+        align-self: center;
+    }
+    .privacy-verdeelt{
+        justify-content: center;
+      }
+  }
+footer{
+    margin-top: 30px;
+}
+/* Einde styling Privacy pagina */
+        
