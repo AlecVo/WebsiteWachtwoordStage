@@ -94,6 +94,7 @@ nav ul li a{
 }
 nav ul li.burger{
     display: none;
+    cursor: pointer;
 }
 nav ul li.burger.hide i:before{
     content: '\f00d';
@@ -264,3 +265,4 @@ footer h4, .logo{
     }
   }
 /* Einde styling footer */
+/* madafaka */
