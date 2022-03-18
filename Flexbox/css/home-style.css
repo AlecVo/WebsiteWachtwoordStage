@@ -112,8 +112,8 @@ button{
     border: 2px solid rgb(91, 48, 160);
     cursor:pointer;
     margin: 0;
-    width: 30%;
-    height: auto;
+    width: 100px;
+    height: 60px;
 }
 button:hover{
     background-color: rgb(91, 48, 160);

@@ -10,26 +10,14 @@ h1{
     padding-left: 5px;
 }
 iframe{
-    height: 400px;
-    width: 200px;
+    height: 90%;
+    width: auto;
 }
 .contact-parent{
-    margin: 7% 20%;
+    margin: 7% 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
-}
-.contact-map{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-.contact-map iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
 }
 @media only screen and (max-width: 1200px) {
     #contact h1{
@@ -40,7 +28,7 @@ iframe{
     }
     #contact {
         text-align: center;
-        padding:0;
     }
   }
+
 /* einde styling Contact pagina */

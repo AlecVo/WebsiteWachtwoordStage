@@ -246,6 +246,12 @@ footer h4, .logo{
 #footer p{
     font-size: 11px;
 }
+.wachtwoord.show{
+    visibility: show;
+}
+.wachtwoord.hide{
+    visibility: hidden;
+}
 @media only screen and (max-width: 1200px) {
     footer{
         display: flex;

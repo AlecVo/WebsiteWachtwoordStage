@@ -13,7 +13,7 @@
   <title>SecureSend</title>
 </head>
 <body>
-  <div class="flex-container">
+  <div class="flex-container" id="container">
     <div class="pagina-padding">
         <!-- Dit is de navbar -->
         <nav id="navbar" class="flex-container-item">
@@ -65,8 +65,12 @@
                     <p> Qui perferendis doloremque ducimus, tenetur aliquam blanditiis atque ad reiciendis numquam at veritatis.</p>
                   </div>
                 </div>
-                <div class="icon-background">
-                  <i class="fas fa-arrow-down"></i>
+                <div>
+                  <a href="#verstuur">
+                    <div class="icon-background">
+                      <i class="fas fa-arrow-down"></i>    
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -96,13 +100,13 @@
                       <div class="flex">
                         <h5>Wachtwoord op de link?</h5>
                         <label class="checkbox">
-                          <input type="checkbox" checked="unchecked">
+                          <input @click="wachtwoordToggle()" type="checkbox">
                           <span class="checkmark"></span>
                         </label>
                       </div>
                     </div>
                     <div class="uitlijning">
-                      <input class="wachtwoord" placeholder="Wachtwoord" type="password" id="pass" name="password">
+                      <input :class="{show:wachtwoord, hide:!wachtwoord}" class="wachtwoord" placeholder="Wachtwoord" type="password">
                       <button>Creër link</button>
                     </div>
                   </div>
