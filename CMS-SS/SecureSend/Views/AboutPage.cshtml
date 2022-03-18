@@ -17,7 +17,7 @@
           </div>
         </div>
         <div class="overons-item foto">
-            <img src="Foto"></img>
+            <img src="@(Url.GetCropUrl(Model.ImageCropper, "banner"))"></img>
         </div>
         <div class="overons-item rechts">
           <div>
@@ -31,7 +31,7 @@
             <p>Wanneer men een bericht/wachtwoord in getypt heeft en op de creër link knop heeft geduwd. Word het bericht geëncryteerd. Niemand kan aan deze gegevens komen enkel als ze de sleutel ervoor hebben. De sleutel word niet opgeslaan in een databank maar meegegeven in de link. Wanneer men op de link klikt word het bericht gedecrypteerd waardoor het bericht zichtbaar wordt voor de ontvanger. Tegelijkertijd word het bericht verwijdert van de database.</p>
           </div>
           <div class="rechts">
-            <img class="m-3" src="../img/Computer.jpg"></img>       
+            <img class="m-3" src="@(Url.GetCropUrl(Model.Foto, "foto"))"></img>       
           </div>
         </div>
         <div class="overons-item rechts">
