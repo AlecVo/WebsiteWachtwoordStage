@@ -9,10 +9,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/CSS/style.css"></link>
+  <link rel="stylesheet" href="css/Style.css"></link>
+  <link rel="stylesheet" href="css/home-style.css"></link>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="script/script.js"></script>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
   <link rel="icon" type="image/x-icon" href="img/icon.jpg">
   <title>SecureSend</title>
 </head>
@@ -61,20 +62,23 @@
               <div class="footer-sitemap">
                 <h4>Sitemap :</h4>
                 <ul>
-                  <li><a href="Home.html">Home</a></li>
-                  <li><a href="html/OverOns.html">Over Ons</a></li>
-                  <li><a href="html/PrivacyPolicy.html">Privacy Policy</a></li>
-                  <li><a href="html/Contact.html">Contact</a></li>
+                @foreach (var link in Model.Value<List<Umbraco.Cms.Core.Models.Link>>("footerLinks", fallback: Fallback.ToAncestors))
+              {
+                
+              <li><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+                
+              } 
                 </ul>
               </div>
               <div class="footer-contact">
                 <h4>Contact Gegevens :</h4>
                 <ul>
-                  <li>Securesend@email.com</li>
-                  <li>0477 11 22 33</a></li>
-                  <li>2590 Leopoldlaan 9</li>
+                  <li>@Model.Value("emailAddress", fallback: Fallback.ToAncestors)</li>
+                  <li>@Model.Value("phoneNumber", fallback: Fallback.ToAncestors)</a></li>
+                  <li>@Model.Value("postalAddress", fallback: Fallback.ToAncestors)</li>
                 </ul>
               </div>
+
             </footer>
             <!-- Einde footer -->
             @RenderBody()
