@@ -9,20 +9,20 @@
 
       <!-- Begin Hero -->
       <header id="contact" class="flex-container-item">
-        <h1>Contact Informatie</h1>
+        <h1>@Model.Value("pageName")</h1>
         <div class="contact-parent">
           <div class="contact-content">
             <div class="content-info">
               <h2>Email adres</h2>
-              <p>securesend@email.com</p>
+              <p>@Model.Value("emailAddress", fallback: Fallback.ToAncestors)</p>
             </div>
             <div class="content-info">
               <h2>Telefoon nummer</h2>
-              <p>0477 11 22 33</p>
+              <p>@Model.Value("phoneNumber", fallback: Fallback.ToAncestors)</p>
             </div>
             <div class="content-info">
               <h2>Locatie</h2>
-              <p>2590 Berlaar Leopoldlaan 9</p>
+              <p>@Model.Value("postalAddress", fallback: Fallback.ToAncestors)</p>
             </div>
           </div>
           <div class="contact-map">
