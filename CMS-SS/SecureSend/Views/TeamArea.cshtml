@@ -1,0 +1,18 @@
+﻿@{
+	Layout = "MasterTemplate.cshtml";
+}
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.TeamArea>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	
+}
+
+<ul>
+@foreach(var member in Model.Children().Where(x => x.IsVisible()))
+{
+    <li>
+    @member.Name
+    </li>
+}
+</ul>
