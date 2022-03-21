@@ -1,5 +1,5 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Homepage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "MasterTemplate.cshtml";
@@ -44,7 +44,7 @@
               <h2>Laten we jouw berichten versturen</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
-                  <img src="@(Url.GetCropUrl(Model.TeamworkFoto, "groot"))"></img>
+                  @* <img src="@(Url.GetCropUrl(Model.TeamworkFoto, "groot"))"></img> *@
                 </div>
                   <div class="verstuur-item">
                     <div>
