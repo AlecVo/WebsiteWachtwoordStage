@@ -1,0 +1,34 @@
+/* Begin styling Contact pagina */
+h1{
+    text-align: center;
+}
+#contact h2{ 
+    padding-bottom: 15px;
+}
+#contact p{
+    padding-bottom: 30px;
+    padding-left: 5px;
+}
+iframe{
+    height: 90%;
+    width: auto;
+}
+.contact-parent{
+    margin: 7% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+@media only screen and (max-width: 1200px) {
+    #contact h1{
+        padding-top:10px;
+    }
+    .contact-parent{
+        grid-template-columns: 1fr;
+    }
+    #contact {
+        text-align: center;
+    }
+  }
+
+/* einde styling Contact pagina */

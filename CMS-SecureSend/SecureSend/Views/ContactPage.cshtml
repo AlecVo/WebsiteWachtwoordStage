@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ContactPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "MasterTemplate.cshtml";
+}
+<head>
+	  <link rel="stylesheet" href="css/contact-style.css"></link>
+</head>
+      <!-- Begin Hero -->
+      <header id="contact" class="flex-container-item">
+        @Model.Value("pageTitle")
+        @Html.GetGridHtml(Model, "gridContact")
+      </header>
+      <!-- Einde Hero -->

@@ -1,0 +1,149 @@
+.home-parent{
+    display: flex;
+    flex-direction: column;
+}
+.hero-item{
+    margin: 30px 0;
+}
+h1,h2,h3,h4,h5{
+    text-align: center;
+}
+h1{
+    margin-top: 120px;
+}
+h2{
+    margin-bottom: 30px;
+}
+#verstuur h5{
+    text-align: left;
+}
+h4{
+    margin-top: 15px;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px 0;
+}
+.card{
+    border-radius: 10%;
+    margin: 5px;
+
+    background-color: white;
+    padding: 20px;
+}
+.card p,h5{
+    margin-top:5px;
+}
+#hero p{
+    font-size: 11px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.icon-background{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 50%;
+    background-color: rgb(91, 48, 160);
+    color: #dadada;
+    margin: auto;
+    font-size: 22px;
+  }
+  i{
+    margin: auto;
+  }
+  .verstuur-parent{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      
+  }
+  .verstuur-item{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+  textarea{
+    margin: 15px 0;
+    width: 300px;
+    height: 150px;
+  }
+  textarea {
+    background: none repeat scroll #dadada ;
+    border-radius: 10px 10px 10px 10px;
+    border-style: none solid solid none;
+    border-width: medium 1px 1px medium;
+    color: black;
+    line-height: 3em;
+    border: 1px solid rgb(91, 48, 160);
+  }
+  textarea:hover{
+      opacity: 0.8;
+  }
+  select{
+    margin: 15px 0;
+    background-color: #dadada;
+    border-radius: 6px 6px 6px 6px;
+    border: 1px solid rgb(91, 48, 160);
+    width: 100%;
+  }
+  select:hover {
+    opacity: 0.8;
+  }
+  .wachtwoord{
+    margin: 15px 0;
+    background-color: #dadada;
+    width: 50%;
+    height: 25px;
+    border: 1px solid rgb(91, 48, 160);
+}
+  .wachtwoord:hover {
+    opacity: 0.8;
+}
+
+button{
+    font-size: medium;
+    background-color: #f1f2f4;
+    border: 2px solid rgb(91, 48, 160);
+    cursor:pointer;
+    margin: 0;
+    width: 100px;
+    height: 60px;
+}
+button:hover{
+    background-color: rgb(91, 48, 160);
+    color: white;
+    transition: 0.2s;
+    border: 2px solid #f1f2f4;
+}
+.uitlijning{
+    display: flex;
+    justify-content: space-between;
+}
+#hero {
+    background-color: chocolate !important;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.checkbox{
+    margin-bottom: 20px;
+    padding-top: 7px;
+}
+/* #hero{
+    background-image: url(/img/banner2.jpg);
+    width: 200px;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+} */
+img{
+    width: 100%;
+}
