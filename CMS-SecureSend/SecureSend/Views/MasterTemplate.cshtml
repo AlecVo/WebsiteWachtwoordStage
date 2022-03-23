@@ -19,9 +19,28 @@
 <body>
   <div class="flex-container" id="container">
     <div class="pagina-padding">
-        
-        @await Html.PartialAsync("Navigation")
-
+      <!-- Dit is de navbar -->
+        <nav id="navbar" class="flex-container-item">
+          <ul>
+            <li class="logo"><a href="">SecureSend</a></li>
+            <li :class="{show:showNav, hide:!showNav}" class="item">
+              <a href="/">Home</a>
+            </li>
+            <li :class="{show:showNav, hide:!showNav}" class="item">
+              <a href="/About">Over Ons</a>
+            </li>
+            <li :class="{show:showNav, hide:!showNav}" class="item">
+              <a href="/privacy">PrivacyPolicy</a>
+            </li>
+            <li :class="{show:showNav, hide:!showNav}" class="item">
+              <a href="/Contact">Contact</a>
+            </li>
+            <li class="burger">
+              @* <a><i @click="burgerToggle()" class="fas fa-bars"></i></a> *@
+            </li>
+          </ul>
+        </nav>
+      <!-- Einde van de navbar -->
       @RenderBody()
       <!-- Begin footer -->
             <footer id="footer" class="flex-container-item">

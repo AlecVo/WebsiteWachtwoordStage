@@ -1,9 +1,0 @@
-{
-    "jobs" :[
-        {"title": "ninja ux designer", "id":1, "Details":"ninja"},
-        {"title": "ninja ux designer 2", "id":2, "Details":"ninja"},
-        {"title": "ninja ux designer 3", "id":3, "Details":"ninja"},
-        {"title": "ninja ux designer 4", "id":4, "Details":"ninja"},
-        {"title": "ninja ux designer 5", "id":5, "Details":"ninja"}
-    ]
-}
