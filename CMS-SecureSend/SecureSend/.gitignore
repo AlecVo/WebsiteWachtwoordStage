@@ -458,6 +458,9 @@ $RECYCLE.BIN/
 ## Umbraco CMS .NETCore
 ##
 
+!Umbraco.mdf
+!Umbraco_log.ldf
+
 # Dont commit Umbraco TEMP folder containing Examine Indexes, NuCache etc
 **/umbraco/Data/TEMP/
 
