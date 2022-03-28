@@ -5,14 +5,14 @@
 	Layout = "MasterTemplate.cshtml";
 }
 <head>
-	  <link rel="stylesheet" href="css/home-style.css"></link>
+	  <link rel="stylesheet" href="css/home-style.css" />
 </head>
-        <hero id="hero" class="flex-container-item">
+        <div id="hero" class="flex-container-item">
+        
           <div class="hero-parent">
             <div class="hero-item">
               <div>
-                <div>
-                </div>
+             
                 @Model.Value("pageTitle")
                 @Model.Value("homeUnderTitle")
                 
@@ -46,13 +46,23 @@
                   </a>
                 </div>
               </div>
-            </div>
+            </div>  
+          </div>
+        
+        @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
+        {          
+          if(item.ShortDescription == null) {
+            <p>tis leeg</p>
+            continue;
+          }
+         <img src='@item.Picture.GetCropUrl(height: 100)'/>
+        }
 
             <div id="verstuur" class="hero-item">
               <h2>Laten we jouw berichten versturen</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
-                  <img src="img/image.jpg"></img>
+                  <img src="img/image.jpg"/>
                 </div>
                   <div class="verstuur-item">
                     <div>
@@ -87,4 +97,4 @@
             </div>
           </div>
         </div>
-        </hero>
+        </div>

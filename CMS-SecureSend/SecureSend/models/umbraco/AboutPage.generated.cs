@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>About Page</summary>
 	[PublishedModel("aboutPage")]
-	public partial class AboutPage : PublishedContentModel, ITitles
+	public partial class AboutPage : PublishedContentModel, IHero, ISEO
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,6 +50,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Block
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("block")]
+		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Block => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "block");
+
+		///<summary>
 		/// GridAbout
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -58,11 +66,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Newtonsoft.Json.Linq.JToken GridAbout => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "gridAbout");
 
 		///<summary>
-		/// PageTitle
+		/// Hero
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("heroBanner")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HeroBanner => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetHeroBanner(this, _publishedValueFallback);
+
+		///<summary>
+		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("metaDescription")]
+		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEO.GetMetaDescription(this, _publishedValueFallback);
+
+		///<summary>
+		/// Page Title: Pagina titel voor zoekmachines
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTitle")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageTitle => global::Umbraco.Cms.Web.Common.PublishedModels.Titles.GetPageTitle(this, _publishedValueFallback);
+		public virtual string PageTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEO.GetPageTitle(this, _publishedValueFallback);
 	}
 }

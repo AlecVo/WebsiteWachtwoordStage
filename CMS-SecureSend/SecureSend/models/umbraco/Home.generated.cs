@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, ITitles
+	public partial class Home : PublishedContentModel, IHero
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,12 +50,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// GridCards: Dit is de grid die gebruikt werd voor de cards
+		/// FooterItem
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("gridCards")]
-		public virtual global::Newtonsoft.Json.Linq.JToken GridCards => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "gridCards");
+		[ImplementPropertyType("footerItem")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> FooterItem => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(_publishedValueFallback, "footerItem");
 
 		///<summary>
 		/// GridVerstuur
@@ -66,14 +66,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Newtonsoft.Json.Linq.JToken GridVerstuur => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "gridVerstuur");
 
 		///<summary>
-		/// HomeUnderTitle: dit is de zin onder de titel
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("homeUnderTitle")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString HomeUnderTitle => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "homeUnderTitle");
-
-		///<summary>
 		/// Subtitle
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -82,11 +74,11 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Subtitle => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "subtitle");
 
 		///<summary>
-		/// PageTitle
+		/// Hero
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("pageTitle")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageTitle => global::Umbraco.Cms.Web.Common.PublishedModels.Titles.GetPageTitle(this, _publishedValueFallback);
+		[ImplementPropertyType("heroBanner")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HeroBanner => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetHeroBanner(this, _publishedValueFallback);
 	}
 }

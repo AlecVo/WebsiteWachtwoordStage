@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Contact Page</summary>
 	[PublishedModel("contactPage")]
-	public partial class ContactPage : PublishedContentModel, ITitles
+	public partial class ContactPage : PublishedContentModel, ISEO
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -58,11 +58,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Newtonsoft.Json.Linq.JToken GridContact => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "gridContact");
 
 		///<summary>
-		/// PageTitle
+		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("metaDescription")]
+		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEO.GetMetaDescription(this, _publishedValueFallback);
+
+		///<summary>
+		/// Page Title: Pagina titel voor zoekmachines
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTitle")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PageTitle => global::Umbraco.Cms.Web.Common.PublishedModels.Titles.GetPageTitle(this, _publishedValueFallback);
+		public virtual string PageTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEO.GetPageTitle(this, _publishedValueFallback);
 	}
 }
