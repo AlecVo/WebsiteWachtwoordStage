@@ -50,12 +50,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Grid Contact
+		/// Contact Grid: Dit is de grid voor de contact web pagina
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("gridContact")]
-		public virtual global::Newtonsoft.Json.Linq.JToken GridContact => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "gridContact");
+		[ImplementPropertyType("contactGrid")]
+		public virtual global::Newtonsoft.Json.Linq.JToken ContactGrid => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "contactGrid");
 
 		///<summary>
 		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines

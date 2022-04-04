@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>About Page</summary>
 	[PublishedModel("aboutPage")]
-	public partial class AboutPage : PublishedContentModel, IHero, ISEO
+	public partial class AboutPage : PublishedContentModel, ISEO
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,28 +50,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Block
+		/// About grid: dit is de grid sectie van de about web pagina
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("block")]
-		public virtual global::Umbraco.Cms.Core.Models.Blocks.BlockListModel Block => this.Value<global::Umbraco.Cms.Core.Models.Blocks.BlockListModel>(_publishedValueFallback, "block");
-
-		///<summary>
-		/// GridAbout
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("gridAbout")]
-		public virtual global::Newtonsoft.Json.Linq.JToken GridAbout => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "gridAbout");
-
-		///<summary>
-		/// Hero
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("heroBanner")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops HeroBanner => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetHeroBanner(this, _publishedValueFallback);
+		[ImplementPropertyType("aboutGrid")]
+		public virtual global::Newtonsoft.Json.Linq.JToken AboutGrid => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "aboutGrid");
 
 		///<summary>
 		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines

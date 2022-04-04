@@ -61,10 +61,12 @@
               <div class="footer-sitemap">
                 <h4>Sitemap :</h4>
                 <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/About">Over Ons</a></li>
-                  <li><a href="/Privacy">Privacy Policy</a></li>
-                  <li><a href="/Contact">Contact</a></li>
+                    @foreach (var link in Model.Value<List<Umbraco.Cms.Core.Models.Footer>>("footerItem", fallback: Fallback.ToAncestors))
+                  {
+                    
+                  <li><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+                    
+                  } 
                 </ul>
               </div>
               <div class="footer-contact">
