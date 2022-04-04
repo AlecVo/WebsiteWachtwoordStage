@@ -25,7 +25,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>NavBrand</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Umbraco.Cms.Core.Models.MediaWithCrops NavBrand { get; }
+		string NavBrand { get; }
 
 		/// <summary>Nav Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -70,12 +70,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("navBrand")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops NavBrand => GetNavBrand(this, _publishedValueFallback);
+		public virtual string NavBrand => GetNavBrand(this, _publishedValueFallback);
 
 		/// <summary>Static getter for NavBrand</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Umbraco.Cms.Core.Models.MediaWithCrops GetNavBrand(INavbar that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(publishedValueFallback, "navBrand");
+		public static string GetNavBrand(INavbar that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "navBrand");
 
 		///<summary>
 		/// Nav Links: hier komen alle navigatie links van de website

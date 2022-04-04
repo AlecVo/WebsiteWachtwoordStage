@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SecureSend",
+    "\\SecureSend\\models",
+    "\\SecureSend\\models\\umbraco",
+    "\\SecureSend\\Properties",
+    "\\SecureSend\\umbraco",
+    "\\SecureSend\\Views",
+    "\\SecureSend\\Views\\Partials"
+  ],
+  "SelectedNode": "\\SecureSend\\models\\umbraco\\Home.generated.cs",
+  "PreviewInSolutionExplorer": false
+}

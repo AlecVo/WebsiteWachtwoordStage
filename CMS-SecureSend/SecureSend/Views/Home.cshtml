@@ -12,10 +12,8 @@
           <div class="hero-parent">
             <div class="hero-item">
               <div>
-             
                 @Model.Value("pageTitle")
                 @Model.Value("homeUnderTitle")
-                
                 <div class="cards">
                   <div class="card">
                     <div class="icon-background"><i class="fas fa-lock"></i></div>
@@ -49,14 +47,14 @@
             </div>  
           </div>
         
-        @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
+        @* @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
         {          
           if(item.ShortDescription == null) {
             <p>tis leeg</p>
             continue;
           }
          <img src='@item.Picture.GetCropUrl(height: 100)'/>
-        }
+        } *@
 
             <div id="verstuur" class="hero-item">
               <h2>Laten we jouw berichten versturen</h2>

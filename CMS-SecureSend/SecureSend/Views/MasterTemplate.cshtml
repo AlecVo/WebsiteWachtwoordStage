@@ -22,20 +22,11 @@
       <!-- Dit is de navbar -->
         <nav id="navbar" class="flex-container-item">
           <ul>
-            <li class="logo"><a href="">SecureSend</a></li>
-            <li :class="{show:showNav, hide:!showNav}" class="item">
-              <a href="/">Home</a>
-            </li>
-            <li :class="{show:showNav, hide:!showNav}" class="item">
-              <a href="/About">Over Ons</a>
-            </li>
-            <li :class="{show:showNav, hide:!showNav}" class="item">
-              <a href="/privacy">PrivacyPolicy</a>
-            </li>
-            <li :class="{show:showNav, hide:!showNav}" class="item">
-              <a href="/Contact">Contact</a>
-            </li>
-            <li class="burger">
+           <li class="logo"><a href="/home">@Model.Value("navBrand")</a></li>
+              @foreach (var link in Model.Value<List<Umbraco.Cms.Core.Models.Link>>("navLinks", fallback: Fallback.ToAncestors))
+                {
+                  <li :class="{show:showNav, hide:!showNav}" class="item"><a href="@link.Url" target="@link.Target">@link.Name</a></li> 
+                } 
               @* <a><i @click="burgerToggle()" class="fas fa-bars"></i></a> *@
             </li>
           </ul>
@@ -45,12 +36,12 @@
       <!-- Begin footer -->
             <footer id="footer" class="flex-container-item">
               <div class="footer-logo">
-                <a class="logo" href="Home.html"><i class="fa fa-key logo"> SecureSend</i></a>
-                <p>copyright &copy; 2020</p>
+                <a class="logo" href="Home.html"><i class="fa fa-key logo">@Model.Value("footerLogo")</i></a>
+                <p>@Model.Value("copyright")</p>
                 <p>Created by Alec Van Oosterwijck</p>
               </div>
               <div class="footer-follow">
-                <h4>follow us :</h4>
+                <h4>@Model.Value("socialMediaTitel")</h4>
                 <div class="social-links">
                   <a href="#"><i class="fab fa-facebook-f"></i></a>
                   <a href="#"><i class="fab fa-twitter"></i></a>
@@ -59,22 +50,20 @@
                 </div>
               </div>
               <div class="footer-sitemap">
-                <h4>Sitemap :</h4>
-                <ul>
-                    @foreach (var link in Model.Value<List<Umbraco.Cms.Core.Models.Footer>>("footerItem", fallback: Fallback.ToAncestors))
+                <h4>@Model.Value("linksTitel")</h4>
+                 <ul> @*dit zorgt ervoor dat elke link op elke pagina hetzelfde is want ze gaan kijken bij de ouder (Home Pagina) *@
+                    @foreach (var link in Model.Value<List<Umbraco.Cms.Core.Models.Link>>("links", fallback: Fallback.ToAncestors))
                   {
-                    
-                  <li><a href="@link.Url" target="@link.Target">@link.Name</a></li>
-                    
+                  <li><a href="@link.Url" target="@link.Target">@link.Name</a></li> 
                   } 
                 </ul>
               </div>
               <div class="footer-contact">
-                <h4>Contact Gegevens :</h4>
+                <h4>@Model.Value("informatieTitle")</h4>
                 <ul>
-                  <li>Securesend@email.com</li>
-                  <li>0477 11 22 33</a></li>
-                  <li>2590 Leopoldlaan 9</li>
+                  <li>@Model.Value("eMail", fallback: Fallback.ToAncestors)</li>
+                  <li>@Model.Value("telefoonNummer", fallback: Fallback.ToAncestors)</a></li>
+                  <li>@Model.Value("locatie", fallback: Fallback.ToAncestors)</li>
                 </ul>
               </div>
             </footer>
