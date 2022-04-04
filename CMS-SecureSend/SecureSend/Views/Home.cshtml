@@ -5,20 +5,20 @@
 	Layout = "MasterTemplate.cshtml";
 }
 <head>
-	  <link rel="stylesheet" href="css/home-style.css" />
+  <link rel="stylesheet" href="/css/home-style.css"/>
 </head>
         <div id="hero" class="flex-container-item">
         
           <div class="hero-parent">
             <div class="hero-item">
               <div>
-                @Model.Value("pageTitle")
-                @Model.Value("homeUnderTitle")
+                <h1>@Model.Value("pageTitle")</h1>
+                <h4>@Model.Value("onderTitel")</h4>
                 <div class="cards">
                   <div class="card">
                     <div class="icon-background"><i class="fas fa-lock"></i></div>
-                    <h5>Encrypted</h5>
-                    <p>Alle berichten worden voordat ze verzonden worden eerst extra beveiligd met encryprie</p>
+                    <h5>@Model.Value("cardTitle")</h5>
+                    <p>@Model.Value("cardContent")</p>
                   </div>
                   <div class="card">
                     <div class="icon-background"><i class="far fa-trash-alt"></i></div>
@@ -57,7 +57,7 @@
         } *@
 
             <div id="verstuur" class="hero-item">
-              <h2>Laten we jouw berichten versturen</h2>
+              <h2>@Model.Value("verstuurTitle")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
                   <img src="img/image.jpg"/>
@@ -65,11 +65,11 @@
                   <div class="verstuur-item">
                     <div>
                       <div class="bericht">
-                        <h5>Jouw geheim bericht:</h5>
+                        <h5>@Model.Value("geheimBerichtTitel")</h5>
                         <textarea placeholder="Vul hier jouw bericht in ..."></textarea>
                       </div>
                       <div class="datum-item">
-                          <h5>Vervalt:</h5>
+                          <h5>@Model.Value("vervalTitel")</h5>
                           <select name="datum" id="vervalDatum">
                             <option value="druk">Na drukken op link</option>
                             <option value="uur">Na 1 uur</option>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="wachtwoord-item">
                       <div class="flex">
-                        <h5>Wachtwoord op de link?</h5>
+                        <h5>@Model.Value("wachtwoordTitel")</h5>
                         <label class="checkbox">
                           @* <input @click="wachtwoordToggle()" type="checkbox"> *@
                           <span class="checkmark"></span>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="uitlijning">
                       <input :class="{show:wachtwoord, hide:!wachtwoord}" class="wachtwoord" placeholder="Wachtwoord" type="password">
-                      <button>Creër link</button>
+                      <button>@Model.Value("creerKnop")</button>
                     </div>
                   </div>
               </div>

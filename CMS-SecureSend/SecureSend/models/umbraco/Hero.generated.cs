@@ -22,10 +22,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 	/// <summary>hero</summary>
 	public partial interface IHero : IPublishedElement
 	{
-		/// <summary>Card Items</summary>
+		/// <summary>Card Content</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::Newtonsoft.Json.Linq.JToken CardItems { get; }
+		string CardContent { get; }
+
+		/// <summary>Card Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::Umbraco.Cms.Core.Strings.IHtmlEncodedString CardIcon { get; }
+
+		/// <summary>Card Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		string CardTitle { get; }
 
 		/// <summary>Hero</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -70,17 +80,43 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Card Items: hier komen de card items van de website
+		/// Card Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("cardItems")]
-		public virtual global::Newtonsoft.Json.Linq.JToken CardItems => GetCardItems(this, _publishedValueFallback);
+		[ImplementPropertyType("cardContent")]
+		public virtual string CardContent => GetCardContent(this, _publishedValueFallback);
 
-		/// <summary>Static getter for Card Items</summary>
+		/// <summary>Static getter for Card Content</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::Newtonsoft.Json.Linq.JToken GetCardItems(IHero that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Newtonsoft.Json.Linq.JToken>(publishedValueFallback, "cardItems");
+		public static string GetCardContent(IHero that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "cardContent");
+
+		///<summary>
+		/// Card Icon: Hier komt het icoon van de card
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("cardIcon")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString CardIcon => GetCardIcon(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Card Icon</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::Umbraco.Cms.Core.Strings.IHtmlEncodedString GetCardIcon(IHero that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(publishedValueFallback, "cardIcon");
+
+		///<summary>
+		/// Card Title: Hier komt de titel van de Card
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("cardTitle")]
+		public virtual string CardTitle => GetCardTitle(this, _publishedValueFallback);
+
+		/// <summary>Static getter for Card Title</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static string GetCardTitle(IHero that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "cardTitle");
 
 		///<summary>
 		/// Hero

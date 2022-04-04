@@ -50,6 +50,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Creër knop: dit is de knop die de link aanmaakt
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("creerKnop")]
+		public virtual string CreerKnop => this.Value<string>(_publishedValueFallback, "creerKnop");
+
+		///<summary>
 		/// Geheim bericht titel: hier komt de titel voor het geheim bericht
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -72,14 +80,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("verstuurTitel")]
 		public virtual string VerstuurTitel => this.Value<string>(_publishedValueFallback, "verstuurTitel");
-
-		///<summary>
-		/// Verval Dropdown: hier komen de datums van wanneer de gegevens niet meer beschikbaar zijn
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("vervalDropdown")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> VervalDropdown => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "vervalDropdown");
 
 		///<summary>
 		/// Verval titel: hier komt de titel voor de verval sectie van de web pagina
@@ -178,12 +178,28 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string TelefoonNummer => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetTelefoonNummer(this, _publishedValueFallback);
 
 		///<summary>
-		/// Card Items: hier komen de card items van de website
+		/// Card Content
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("cardItems")]
-		public virtual global::Newtonsoft.Json.Linq.JToken CardItems => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetCardItems(this, _publishedValueFallback);
+		[ImplementPropertyType("cardContent")]
+		public virtual string CardContent => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetCardContent(this, _publishedValueFallback);
+
+		///<summary>
+		/// Card Icon: Hier komt het icoon van de card
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("cardIcon")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString CardIcon => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetCardIcon(this, _publishedValueFallback);
+
+		///<summary>
+		/// Card Title: Hier komt de titel van de Card
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("cardTitle")]
+		public virtual string CardTitle => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetCardTitle(this, _publishedValueFallback);
 
 		///<summary>
 		/// Hero
