@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="/css/home-style.css"/>
 </head>
         <div id="hero" class="flex-container-item">
-        
           <div class="hero-parent">
             <div class="hero-item">
               <div>
@@ -46,21 +45,17 @@
               </div>
             </div>  
           </div>
-        
-   
-
-            <div id="verstuur" class="hero-item">
+          <div id="verstuur" class="hero-item">
               <h2>@Model.Value("verstuurTitle")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
                   @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
-                   {
-                     if(item.ShortDescription == null) 
-                     {<p>tis leeg</p>
-                     continue;
-                   }
-         <img src='@item.Picture.verstuurImage(height: 100)'/>
-         }
+                  {
+                    if(item.ShortDescription == null) {
+                      <p>tis leeg</p>
+                    }
+                  <img src='@item.Picture.GetCropUrl()'/>
+                  }
                 </div>
                   <div class="verstuur-item">
                     <div>

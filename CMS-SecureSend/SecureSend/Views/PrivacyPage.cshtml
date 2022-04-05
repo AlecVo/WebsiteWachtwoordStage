@@ -5,7 +5,7 @@
 	Layout = "MasterTemplate.cshtml";
 }
 <head>
-  <link rel="stylesheet" href="/css/privacy-style.css"></link>
+  <link rel="stylesheet" href="/css/privacy-style.css"/>
 </head>
 <body>
     <div class="flex-container" id="container">
@@ -15,17 +15,17 @@
           <h1>Privacy Policy</h1>
             <div class="privacy-parent">
               <div class="privacy-item">
-                <h2>Service beschrijving</h2>
+                <h2>@Model.Value("serviceTitel")</h2>
                 <div class="privacy-verdeelt">
-                <p>SecureSend is een gratis webgebaseerde service waarmee gebruikers gecodeerde notities kunnen maken die ze via internet kunnen delen als unieke eenmalige HTTPS-URL's (hierna links genoemd) die standaard verlopen na de eerste toegang via een webbrowser.<br/><br/>Aangezien SecureSend geen middelen biedt voor het verzenden van de link, is het verzenden van de link de volledige verantwoordelijkheid van de gebruikers.Afhankelijk van het communicatiekanaal van uw keuze (bijv. e-mail, fax, sms, telefoon, instant messaging, sociale media), kan er een zeker risico zijn dat derden uw communicatie onderscheppen, kennis krijgen van de gecommuniceerde link en zo uw notitie kunnen lezen. <br/><br/></p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo animi repellat, pariatur laborum quidem, eveniet blanditiis maxime impedit dicta quaerat deleniti sapiente quos. Consectetur repellat quo quidem doloremque adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur temporibus dolorum libero quaerat in fugiat sunt iure, deleniti excepturi doloribus, aliquid expedita voluptas aliquam praesentium voluptatibus ipsa quos, odio voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, error consectetur voluptatum tenetur ea rem ducimus quae obcaecati ipsum, exercitationem possimus ullam, provident officia incidunt rerum molestiae quo cupiditate laboriosam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste maiores rerum vero debitis illum? Omnis quam corporis dolorum. Delectus illo repellat repudiandae voluptatem voluptate perferendis eveniet totam, fugit harum?</p>
+                <p>@Model.Value("serviceLinkseContent")</p>
+                <p>@Model.Value("serviceRechtseContent")</p>
               </div>
               </div>
               <div class="privacy-item">
-                <h2>Verwerking IP-adressen</h2>
+                <h2>@Model.Value("iPTitle")</h2>
                 <div class="privacy-verdeelt">
-                <p>SecureSend registreert de IP-adressen niet; ze worden verwerkt om communicatie met de servers van SecureSend mogelijk te maken, maar ze maken geen deel uit van de logbestanden. IP-adressen worden verwijderd zodra ze niet meer nodig zijn voor communicatiedoeleinden.</p>
-                <p>SecureSend registreert de IP-adressen niet; ze worden verwerkt om communicatie met de servers van SecureSend mogelijk te maken, maar ze maken geen deel uit van de logbestanden. IP-adressen worden verwijderd zodra ze niet meer nodig zijn voor communicatiedoeleinden.</p>
+                <p>@Model.Value("ipLinkseContent")</p>
+                <p>@Model.Value("ipRechtseContent")</p>
               </div>
               </div>
               <div class="privacy-item">
