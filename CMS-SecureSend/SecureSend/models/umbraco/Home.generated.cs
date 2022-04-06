@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IFooter, IHero, INavbar, ISEO
+	public partial class Home : PublishedContentModel, IContactFormContorls, IFooter, IHero, INavbar, ISEO
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -104,6 +104,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("wachtwoordTitel")]
 		public virtual string WachtwoordTitel => this.Value<string>(_publishedValueFallback, "wachtwoordTitel");
+
+		///<summary>
+		/// Bedankt Bericht: Als het bericht juist verzonden is , toont dit bericht
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("bedanktBericht")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString BedanktBericht => global::Umbraco.Cms.Web.Common.PublishedModels.ContactFormContorls.GetBedanktBericht(this, _publishedValueFallback);
+
+		///<summary>
+		/// Error Message: Als er een error is met het bericht te versturen
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("errorMessage")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ErrorMessage => global::Umbraco.Cms.Web.Common.PublishedModels.ContactFormContorls.GetErrorMessage(this, _publishedValueFallback);
 
 		///<summary>
 		/// contact list: Hier is de lijst van gegevens die in de footer zichtbaar is
