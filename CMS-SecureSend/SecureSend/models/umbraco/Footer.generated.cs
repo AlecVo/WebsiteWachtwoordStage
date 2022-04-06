@@ -22,15 +22,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 	/// <summary>Footer</summary>
 	public partial interface IFooter : IPublishedElement
 	{
+		/// <summary>contact list</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		global::System.Collections.Generic.IEnumerable<string> ContactList { get; }
+
 		/// <summary>Copyright</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string Copyright { get; }
 
-		/// <summary>E-mail</summary>
+		/// <summary>Footer Content Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string EMail { get; }
+		global::Umbraco.Cms.Core.Models.Link FooterContentLinks { get; }
 
 		/// <summary>Footer Logo</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -45,32 +50,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> Links { get; }
+		global::Umbraco.Cms.Core.Models.Link Links { get; }
 
 		/// <summary>Links Titel</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string LinksTitel { get; }
 
-		/// <summary>Locatie</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Locatie { get; }
-
 		/// <summary>Social media links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string SmLinks { get; }
+		global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> SmLinks { get; }
 
 		/// <summary>Social Media Titel</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		string SocialMediaTitel { get; }
-
-		/// <summary>Telefoon Nummer</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string TelefoonNummer { get; }
 	}
 
 	/// <summary>Footer</summary>
@@ -105,6 +100,19 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// contact list: Hier is de lijst van gegevens die in de footer zichtbaar is
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("contactList")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> ContactList => GetContactList(this, _publishedValueFallback);
+
+		/// <summary>Static getter for contact list</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		public static global::System.Collections.Generic.IEnumerable<string> GetContactList(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<string>>(publishedValueFallback, "contactList");
+
+		///<summary>
 		/// Copyright: hier komt de copyright
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -118,17 +126,17 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public static string GetCopyright(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "copyright");
 
 		///<summary>
-		/// E-mail: Hier komt de email van het bedrijf
+		/// Footer Content Links: Vul hier de content links in van de footer
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("eMail")]
-		public virtual string EMail => GetEMail(this, _publishedValueFallback);
+		[ImplementPropertyType("footerContentLinks")]
+		public virtual global::Umbraco.Cms.Core.Models.Link FooterContentLinks => GetFooterContentLinks(this, _publishedValueFallback);
 
-		/// <summary>Static getter for E-mail</summary>
+		/// <summary>Static getter for Footer Content Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetEMail(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "eMail");
+		public static global::Umbraco.Cms.Core.Models.Link GetFooterContentLinks(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Link>(publishedValueFallback, "footerContentLinks");
 
 		///<summary>
 		/// Footer Logo: hier komt de logo van het bedrijf
@@ -162,12 +170,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("links")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> Links => GetLinks(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Models.Link Links => GetLinks(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link> GetLinks(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.Link>>(publishedValueFallback, "links");
+		public static global::Umbraco.Cms.Core.Models.Link GetLinks(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Models.Link>(publishedValueFallback, "links");
 
 		///<summary>
 		/// Links Titel: Dit is de titel boven de footer links
@@ -183,30 +191,17 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public static string GetLinksTitel(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "linksTitel");
 
 		///<summary>
-		/// Locatie: Hier komt de locatie van het bedrijf
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("locatie")]
-		public virtual string Locatie => GetLocatie(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Locatie</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetLocatie(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "locatie");
-
-		///<summary>
 		/// Social media links: Hier komen de links van de social media die het bedrijf gebruikt
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("smLinks")]
-		public virtual string SmLinks => GetSmLinks(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> SmLinks => GetSmLinks(this, _publishedValueFallback);
 
 		/// <summary>Static getter for Social media links</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetSmLinks(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "smLinks");
+		public static global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> GetSmLinks(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement>>(publishedValueFallback, "smLinks");
 
 		///<summary>
 		/// Social Media Titel: Dit is de titel voor de social media
@@ -220,18 +215,5 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public static string GetSocialMediaTitel(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "socialMediaTitel");
-
-		///<summary>
-		/// Telefoon Nummer: hier komt de telefoon nummer van het bedrijf
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("telefoonNummer")]
-		public virtual string TelefoonNummer => GetTelefoonNummer(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Telefoon Nummer</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetTelefoonNummer(IFooter that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "telefoonNummer");
 	}
 }

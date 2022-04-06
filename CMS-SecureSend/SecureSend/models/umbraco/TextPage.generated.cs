@@ -119,7 +119,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("picture")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Picture => global::Umbraco.Cms.Web.Common.PublishedModels.Summary.GetPicture(this, _publishedValueFallback);
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.MediaWithCrops> Picture => global::Umbraco.Cms.Web.Common.PublishedModels.Summary.GetPicture(this, _publishedValueFallback);
 
 		///<summary>
 		/// Short Description: Tekst die in lijsten gebruikt kan worden

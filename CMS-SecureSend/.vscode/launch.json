@@ -1,5 +1,6 @@
 {
     "version": "0.2.0",
+    // we need to verify if this works on other pc's
     "configurations": [
         {
             // Use IntelliSense to find out which attributes exist for C# debugging

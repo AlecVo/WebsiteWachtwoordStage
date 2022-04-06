@@ -74,6 +74,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string IPtitle => this.Value<string>(_publishedValueFallback, "iPTitle");
 
 		///<summary>
+		/// Linkse Content: Hier komt de linkse content van de pagina
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("linkseContent")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> LinkseContent => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "linkseContent");
+
+		///<summary>
+		/// Rechtse Content: Hier komt de rechtse content van de pagina
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("rechtseContent")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> RechtseContent => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "rechtseContent");
+
+		///<summary>
 		/// service linkse content: Hier komt de content van de service sectie die links uitgelijnd word
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
@@ -96,6 +112,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("serviceTitel")]
 		public virtual string ServiceTitel => this.Value<string>(_publishedValueFallback, "serviceTitel");
+
+		///<summary>
+		/// Titles
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("titles")]
+		public virtual global::System.Collections.Generic.IEnumerable<string> Titles => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "titles");
 
 		///<summary>
 		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines

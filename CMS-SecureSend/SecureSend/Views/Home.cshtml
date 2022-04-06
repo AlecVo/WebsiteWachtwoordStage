@@ -49,13 +49,20 @@
               <h2>@Model.Value("verstuurTitle")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
-                  @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
+                  @* @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
                   {
                     if(item.ShortDescription == null) {
                       <p>tis leeg</p>
+                      continue;
                     }
-                  <img src='@item.Picture.GetCropUrl()'/>
-                  }
+                     <img src='@item.Picture.GetCropUrl()'/>
+                  } *@
+                  @{
+                    foreach (var item in Model.Foto)
+                    {
+                        <img src="@item.GetCropUrl("foto")" />
+                    }
+                }
                 </div>
                   <div class="verstuur-item">
                     <div>
