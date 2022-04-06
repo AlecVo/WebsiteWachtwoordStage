@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IFooter, IHero, INavbar, ISEO
+	public partial class Home : PublishedContentModel, IFooter, IHero, INavbar, ISEO, ISummary
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -56,6 +56,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("creerKnop")]
 		public virtual string CreerKnop => this.Value<string>(_publishedValueFallback, "creerKnop");
+
+		///<summary>
+		/// foto: test
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("foto")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.MediaWithCrops> Foto => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.MediaWithCrops>>(_publishedValueFallback, "foto");
 
 		///<summary>
 		/// Geheim bericht titel: hier komt de titel voor het geheim bericht
@@ -248,5 +256,21 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("pageTitle")]
 		public virtual string PageTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEO.GetPageTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// Picture: Foto die word getoond in lijst
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("picture")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.MediaWithCrops> Picture => global::Umbraco.Cms.Web.Common.PublishedModels.Summary.GetPicture(this, _publishedValueFallback);
+
+		///<summary>
+		/// Short Description: Tekst die in lijsten gebruikt kan worden
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("shortDescription")]
+		public virtual string ShortDescription => global::Umbraco.Cms.Web.Common.PublishedModels.Summary.GetShortDescription(this, _publishedValueFallback);
 	}
 }
