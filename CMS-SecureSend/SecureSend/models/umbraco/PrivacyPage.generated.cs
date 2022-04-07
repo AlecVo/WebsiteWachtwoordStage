@@ -50,76 +50,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// ip linkse content: hier komt de content van de ip sectie die links uitgelijnd worden
+		/// Privacy Content: Hier komen alle titles en de content erover terecht
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ipLinkseContent")]
-		public virtual string IpLinkseContent => this.Value<string>(_publishedValueFallback, "ipLinkseContent");
-
-		///<summary>
-		/// ip rechtse content: hier komt de content van de ip sectie die rechts uitgelijnd worden
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("ipRechtseContent")]
-		public virtual string IpRechtseContent => this.Value<string>(_publishedValueFallback, "ipRechtseContent");
-
-		///<summary>
-		/// IP Title: Hier komt de title van het ip
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("iPTitle")]
-		public virtual string IPtitle => this.Value<string>(_publishedValueFallback, "iPTitle");
-
-		///<summary>
-		/// Linkse Content: Hier komt de linkse content van de pagina
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("linkseContent")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> LinkseContent => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "linkseContent");
-
-		///<summary>
-		/// Rechtse Content: Hier komt de rechtse content van de pagina
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("rechtseContent")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> RechtseContent => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "rechtseContent");
-
-		///<summary>
-		/// service linkse content: Hier komt de content van de service sectie die links uitgelijnd word
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("serviceLinkseContent")]
-		public virtual string ServiceLinkseContent => this.Value<string>(_publishedValueFallback, "serviceLinkseContent");
-
-		///<summary>
-		/// service rechtse content: Hier komt de content van de service sectie die rechts uitgelijd word
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("serviceRechtseContent")]
-		public virtual string ServiceRechtseContent => this.Value<string>(_publishedValueFallback, "serviceRechtseContent");
-
-		///<summary>
-		/// Service Titel: Hier komt de titel van de service
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("serviceTitel")]
-		public virtual string ServiceTitel => this.Value<string>(_publishedValueFallback, "serviceTitel");
-
-		///<summary>
-		/// Titles
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("titles")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> Titles => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "titles");
+		[ImplementPropertyType("privacyContent")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.HistoryItem> PrivacyContent => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.HistoryItem>>(_publishedValueFallback, "privacyContent");
 
 		///<summary>
 		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines
