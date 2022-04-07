@@ -22,11 +22,7 @@
         <nav id="navbar" class="flex-container-item">
           <ul>
            <li class="logo"><a href="/home">@Model.Value("navBrand")</a></li>
-              @foreach (var link in Model.Value<List<Umbraco.Cms.Core.Models.Link>>("navLinks", fallback: Fallback.ToAncestors))
-                {
-                  <li :class="{show:showNav, hide:!showNav}" class="item"><a href="@link.Url" target="@link.Target">@link.Name</a></li> 
-                } 
-              @* <a><i @click="burgerToggle()" class="fas fa-bars"></i></a> *@
+            
             </li>
           </ul>
         </nav>
@@ -50,12 +46,6 @@
               </div>
               <div class="footer-sitemap">
                 <h4>@Model.Value("linksTitel")</h4>
-                 <ul> @*dit zorgt ervoor dat elke link op elke pagina hetzelfde is want ze gaan kijken bij de ouder (Home Pagina) *@
-                    @foreach (var link in Model.Value<List<Umbraco.Cms.Core.Models.Link>>("links", fallback: Fallback.ToAncestors))
-                  {
-                  <li><a href="@link.Url" target="@link.Target">@link.Name</a></li> 
-                  } 
-                </ul>
               </div>
               <div class="footer-contact">
                 <h4>@Model.Value("informatieTitle")</h4>
