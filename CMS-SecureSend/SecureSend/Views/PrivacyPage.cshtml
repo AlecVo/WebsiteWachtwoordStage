@@ -28,23 +28,6 @@
                 <p>@Model.Value("ipRechtseContent")</p>
               </div>
               </div>
-              @{
-                  if (Model.Titles.Any())
-                  {
-                      <ul>
-                          @foreach (var titel in Model.Titles)
-                          {
-                            <li class="privacy-item">
-                              <h2>@titel</h2>
-                              <div class="privacy-verdeelt">
-                              <p>@Model.LinkseContent.ToString()</p>
-                              <p>@Model.RechtseContent.ToString()</p>
-                              </div>
-                            </li>
-                          }
-                      </ul>
-                  }
-                }
               <div class="privacy-item">
                 <h2>Pseudonieme gegevens</h2>
                 <div class="privacy-verdeelt">

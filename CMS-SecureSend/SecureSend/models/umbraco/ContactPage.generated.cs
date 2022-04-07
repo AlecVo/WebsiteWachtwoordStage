@@ -50,12 +50,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Contact Grid: Dit is de grid voor de contact web pagina
+		/// Map: Plaats hier uw locatie
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactGrid")]
-		public virtual global::Newtonsoft.Json.Linq.JToken ContactGrid => this.Value<global::Newtonsoft.Json.Linq.JToken>(_publishedValueFallback, "contactGrid");
+		[ImplementPropertyType("map")]
+		public virtual global::Bergmania.OpenStreetMap.Core.OpenStreetMapModel Map => this.Value<global::Bergmania.OpenStreetMap.Core.OpenStreetMapModel>(_publishedValueFallback, "map");
 
 		///<summary>
 		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines

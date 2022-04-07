@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IContactFormContorls, IFooter, IHero, INavbar, ISEO
+	public partial class Home : PublishedContentModel, IContactFormContorls, IHero, INavbar, ISEO
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -120,78 +120,6 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("errorMessage")]
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ErrorMessage => global::Umbraco.Cms.Web.Common.PublishedModels.ContactFormContorls.GetErrorMessage(this, _publishedValueFallback);
-
-		///<summary>
-		/// contact list: Hier is de lijst van gegevens die in de footer zichtbaar is
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("contactList")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> ContactList => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetContactList(this, _publishedValueFallback);
-
-		///<summary>
-		/// Copyright: hier komt de copyright
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("copyright")]
-		public virtual string Copyright => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetCopyright(this, _publishedValueFallback);
-
-		///<summary>
-		/// Footer Content Links: Vul hier de content links in van de footer
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("footerContentLinks")]
-		public virtual global::Umbraco.Cms.Core.Models.Link FooterContentLinks => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetFooterContentLinks(this, _publishedValueFallback);
-
-		///<summary>
-		/// Footer Logo: hier komt de logo van het bedrijf
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("footerLogo")]
-		public virtual string FooterLogo => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetFooterLogo(this, _publishedValueFallback);
-
-		///<summary>
-		/// InformatieTitle: Dit is de titel boven de contact gegevens
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("informatieTitle")]
-		public virtual string InformatieTitle => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetInformatieTitle(this, _publishedValueFallback);
-
-		///<summary>
-		/// Links: Hier komen de links van de footer sitemap.
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("links")]
-		public virtual global::Umbraco.Cms.Core.Models.Link Links => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetLinks(this, _publishedValueFallback);
-
-		///<summary>
-		/// Links Titel: Dit is de titel boven de footer links
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("linksTitel")]
-		public virtual string LinksTitel => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetLinksTitel(this, _publishedValueFallback);
-
-		///<summary>
-		/// Social media links: Hier komen de links van de social media die het bedrijf gebruikt
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("smLinks")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Core.Models.PublishedContent.IPublishedElement> SmLinks => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetSmLinks(this, _publishedValueFallback);
-
-		///<summary>
-		/// Social Media Titel: Dit is de titel voor de social media
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("socialMediaTitel")]
-		public virtual string SocialMediaTitel => global::Umbraco.Cms.Web.Common.PublishedModels.Footer.GetSocialMediaTitel(this, _publishedValueFallback);
 
 		///<summary>
 		/// Card Content
