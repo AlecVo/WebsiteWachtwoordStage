@@ -12,32 +12,7 @@
       <div class="overons-parent">
         <div class="overons-item">
           <div>
-            <h2>Wat is SecureSend?</h2>
-            <p>SecureSend is een website die ervoor zorgt dat men gegevens veilig kan doorsturen. Het is opgericht omdat er weinig veilige websites zijn waar je gegevens veilig kunt doorsturen.</p>
-          </div>
-        </div>
-        <div class="overons-item foto">
-            <img src="../img/Banner.jpg"></img>
-        </div>
-        <div class="overons-item rechts">
-          <div>
-            <h2>Is SecureSend veilig?</h2>
-            <p>Ja, onze code is opensource dus je kan alles terugvinden. We kunnen zelf niet aan de opgeslagen gegevens omdat we de key niet hebben om het te kunnen ontgrendelen.</p>
-          </div>
-        </div>
-        <div class="overons-item">
-          <div>
-           <h2>Hoe werkt SecureSend?</h2>
-            <p>Wanneer men een bericht/wachtwoord in getypt heeft en op de creër link knop heeft geduwd. Word het bericht geëncryteerd. Niemand kan aan deze gegevens komen enkel als ze de sleutel ervoor hebben. De sleutel word niet opgeslaan in een databank maar meegegeven in de link. Wanneer men op de link klikt word het bericht gedecrypteerd waardoor het bericht zichtbaar wordt voor de ontvanger. Tegelijkertijd word het bericht verwijdert van de database.</p>
-          </div>
-          <div class="rechts">
-            <img class="m-3" src="../img/Computer.jpg"></img>
-          </div>
-        </div>
-        <div class="overons-item rechts">
-          <div>
-            <h2>Wat is SecureSend's doel?</h2>
-            <p>Ons doel is om volwassenen een manier te geven om berichten/wachtwoorden/gegevens wereldwijd veilig met elkaar te delen.</p>
+            @Html.GetGridHtml(Model,"aboutGrid")
           </div>
         </div>
       </div>

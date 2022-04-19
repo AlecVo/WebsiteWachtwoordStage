@@ -1,10 +1,7 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
-@using Umbraco.Cms.Core.Models;
-@using Umbraco.Cms.Core.Services;
-@{
-    var homePage = Model.AncestorOrSelf<ContentModels.Home>();
-}
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -22,11 +19,11 @@
   <div class="flex-container" id="container">
     <div class="pagina-padding">
       <!-- Dit is de navbar -->
-    @await Html.PartialAsync("topNavigation", homePage)
+    @* @await Html.PartialAsync("topNavigation", homePage) *@
     @RenderBody()
       <!-- Einde van de navbar -->
       <!-- Begin footer -->
-    @await Html.PartialAsync("footer", homePage)
+    @* @await Html.PartialAsync("footer", homePage) *@
             
   <script src="wwwroot/scripts/script.js"></script>
 </body>
