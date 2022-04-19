@@ -1,0 +1,49 @@
+﻿@inherits UmbracoViewPage<ContentModels.IFooterControls>
+
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+
+@if (Model != null)
+{
+    var homePage = (IPublishedContent)Model;
+    
+    <footer id="footer" class="flex-container-item">
+        <div class="container">
+            <div class="footer-logo">
+                <a class="logo" href="Home.html"><i class="fa fa-key logo"> SecureSend</i></a>
+                <p>copyright &copy; 2020</p>
+                <p>Created by Alec Van Oosterwijck</p>
+              </div>
+            @if (Model.FooterSocialLinks != null && Model.FooterSocialLinks.Any())
+            {
+                <div class="social-follow">
+                    <h4>follow us :</h4>
+                    @foreach (var item in Model.FooterSocialLinks)
+                    {
+                        @if (item is ContentModels.IconLinkItem)
+                        {
+                            var linkItem = item as ContentModels.IconLinkItem;
+                            <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target" rel="noopener" title="@linkItem.Link.Name" class="bg-primary"><i class="icon @(item.Value<string>("icon").ToIconClass())"></i></a>
+                        }
+                    }
+                </div>
+            }
+            @if (Model.FooterContentLinks != null && Model.FooterContentLinks.Any())
+            {
+            <h4>Sitemap :</h4>
+                <div class="links">
+                    @foreach (var item in Model.FooterContentLinks)
+                    {
+                        <a href="@item.Url" target="@item.Target">@item.Name</a>
+                    }
+                </div>
+            }
+              <div class="footer-contact">
+                <h4>Contact Gegevens :</h4>
+                <ul>
+                  <li>Securesend@email.com</li>
+                  <li>0477 11 22 33</a></li>
+                  <li>2590 Leopoldlaan 9</li>
+                </ul>
+              </div>
+        </div>
+    </footer>

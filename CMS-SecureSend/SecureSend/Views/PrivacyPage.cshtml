@@ -10,58 +10,14 @@
 <body>
     <div class="flex-container" id="container">
       <div class="pagina-padding">
-        <!-- Begin hero -->
         <section id="privacy">
           <h1>Privacy Policy</h1>
             <div class="privacy-parent">
               <div class="privacy-item">
-                <h2>@Model.Value("serviceTitel")</h2>
-                <div class="privacy-verdeelt">
-                <p>@Model.Value("serviceLinkseContent")</p>
-                <p>@Model.Value("serviceRechtseContent")</p>
+                @await Html.PartialAsync("titleAndContent", Model)
               </div>
-              </div>
-              <div class="privacy-item">
-                <h2>@Model.Value("iPTitle")</h2>
-                <div class="privacy-verdeelt">
-                <p>@Model.Value("ipLinkseContent")</p>
-                <p>@Model.Value("ipRechtseContent")</p>
-              </div>
-              </div>
-              <div class="privacy-item">
-                <h2>Pseudonieme gegevens</h2>
-                <div class="privacy-verdeelt">
-                <p>SecureSend registreert de IP-adressen niet; ze worden verwerkt om communicatie met de servers van SecureSend mogelijk te maken, maar ze maken geen deel uit van de logbestanden. IP-adressen worden verwijderd zodra ze niet meer nodig zijn voor communicatiedoeleinden.</p>
-                <p>SecureSend registreert de IP-adressen niet; ze worden verwerkt om communicatie met de servers van SecureSend mogelijk te maken, maar ze maken geen deel uit van de logbestanden. IP-adressen worden verwijderd zodra ze niet meer nodig zijn voor communicatiedoeleinden.</p>  
-              </div>
-              </div>
-              <div class="privacy-item">
-                <h2>Disclaimer</h2>
-                <div class="privacy-verdeelt">
-                <p>We kunnen niet verantwoordelijk worden gehouden voor de informatie in de toelichting, aangezien we deze informatie op geen enkele manier kunnen bekijken of modereren. 
-                  <br/><br/>U, de gebruiker, bent verantwoordelijk voor het veilig houden van de link met de decoderingssleutel en wanneer een persoon op de link van de notitie klikt, wijst SecureSend elke verantwoordelijkheid af met betrekking tot de inhoud van de notitie. U moet veilig de link doorsturen via mail, bericht, persoonlijk, meeting omdat SecureSend dit nog niet heeft geimplementeerd. Het kan zeker zijn dat dit in de toekomst wel zo is.
-                </p><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit atque velit facilis reiciendis molestiae veniam rerum inventore exercitationem vel unde quidem libero ratione laborum nulla et, cumque hic temporibus nostrum!
-                Est atque veritatis reiciendis ab natus soluta earum. Saepe neque sequi commodi repellendus, eveniet ex voluptatem sint tempore rem animi quasi omnis non aliquid quidem maxime, dolorum quaerat dicta? Quam.
-                Quae consequatur aspernatur praesentium rerum repellat ipsum in officiis iure minima reprehenderit rem veniam incidunt distinctio, eligendi inventore omnis molestias quisquam necessitatibus a expedita nisi nesciunt id hic! Nemo, exercitationem.</p>
-              </div>
-              </div>
-              <div class="privacy-item">
-                <h2>Cookies</h2>
-                <div class="privacy-verdeelt">
-                <p>Privnote gebruikt cookies (kleine tekstbestanden die door uw browser op uw computer worden opgeslagen wanneer u een website bezoekt) voor ons eigen belang bij het verbeteren van het gebruik van onze site en service. In sommige gevallen zullen ze ook worden gebruikt voor promotionele doeleinden</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, amet quos vitae omnis alias dolor saepe inventore  a quia numquam nihil saepe maiores magni vero? Saepe laboriosam Quos rerum et dolores, distinctio iusto alias dignissimos laudantium sequi quidem, qui voluptatem odit nesciunt quod? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium, dolore quasi asperiores eius aliquid vero fugit, facere quod eos atque pariatur consectetur totam, culpa tempora quisquam? Illum, culpa. Est, architecto.</p>
-              </div>
-              </div>
-              <div class="privacy-item">
-                <h2>Gebruik van kinderen</h2>
-                <div class="privacy-verdeelt">
-                <p>SecureSend registreert de IP-adressen niet; ze worden verwerkt om communicatie met de servers van SecureSend </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sunt architecto magnam ipsa nulla soluta provident obcaecati velit, ut harum dolorem ipsam vero pariatur. Atque facilis saepe dolores placeat corporis.</p>
-              </div>
-            </div>
           </div>
         </section>
-        <!-- Einde hero -->
       </div>
     </div>
   </body>

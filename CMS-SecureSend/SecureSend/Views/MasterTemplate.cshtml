@@ -1,6 +1,9 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@using Umbraco.Cms.Core.Models;
+@using Umbraco.Cms.Core.Services;
 @{
+    var homePage = Model.AncestorOrSelf<ContentModels.Home>();
 }
 <!DOCTYPE html>
 <html lang="nl">
@@ -19,46 +22,12 @@
   <div class="flex-container" id="container">
     <div class="pagina-padding">
       <!-- Dit is de navbar -->
-        <nav id="navbar" class="flex-container-item">
-          <ul>
-           <li class="logo"><a href="/home">@Model.Value("navBrand")</a></li>
-            
-            </li>
-          </ul>
-        </nav>
+    @await Html.PartialAsync("topNavigation", homePage)
+    @RenderBody()
       <!-- Einde van de navbar -->
-      @RenderBody()
       <!-- Begin footer -->
-            <footer id="footer" class="flex-container-item">
-              <div class="footer-logo">
-                <a class="logo" href="Home.html"><i class="fa fa-key logo">@Model.Value("footerLogo")</i></a>
-                <p>@Model.Value("copyright")</p>
-                <p>Created by Alec Van Oosterwijck</p>
-              </div>
-              <div class="footer-follow">
-                <h4>@Model.Value("socialMediaTitel")</h4>
-                <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="footer-sitemap">
-                <h4>@Model.Value("linksTitel")</h4>
-              </div>
-              <div class="footer-contact">
-                <h4>@Model.Value("informatieTitle")</h4>
-                <ul>
-                  <li>@Model.Value("eMail", fallback: Fallback.ToAncestors)</li>
-                  <li>@Model.Value("telefoonNummer", fallback: Fallback.ToAncestors)</a></li>
-                  <li>@Model.Value("locatie", fallback: Fallback.ToAncestors)</li>
-                </ul>
-              </div>
-            </footer>
-          <!-- Einde footer -->
-    </div>
-  </div>
+    @await Html.PartialAsync("footer", homePage)
+            
   <script src="wwwroot/scripts/script.js"></script>
 </body>
 </html>
