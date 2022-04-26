@@ -1,0 +1,18 @@
+﻿@inherits UmbracoViewPage<ContentModels.IPrivacyTextControls>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+
+<div class="privacy-parent">
+    @if (Model.titleAndContent != null && Model.titleAndContent.Any())
+    {
+        foreach (var item in Model.titleAndContent)
+        {
+            <div class="privacy-item">
+                <h2>@Model.Value("title")</h2>
+                <div class="privacy-verdeelt">
+                    <p>@Model.Value("linkerContent")<br/><br/></p>
+                    <p>@Model.Value("rechterContent")</p>
+                </div>
+            </div>
+        }
+    }
+</div> 
