@@ -50,12 +50,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Privacy Content: Hier komen alle titles en de content erover terecht
+		/// Title and Content: hier komen alle content en titels van de privacy policy pagina
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("privacyContent")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.HistoryItem> PrivacyContent => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.HistoryItem>>(_publishedValueFallback, "privacyContent");
+		[ImplementPropertyType("titleAndContent")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.TitleText> TitleAndContent => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.TitleText>>(_publishedValueFallback, "titleAndContent");
 
 		///<summary>
 		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines

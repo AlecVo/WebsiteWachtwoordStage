@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Home</summary>
 	[PublishedModel("home")]
-	public partial class Home : PublishedContentModel, IContactFormContorls, IHero, INavbar, ISEO
+	public partial class Home : PublishedContentModel, IContactFormContorls, IHero, IMegaNavBar, ISEO
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -162,20 +162,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string OnderTitel => global::Umbraco.Cms.Web.Common.PublishedModels.Hero.GetOnderTitel(this, _publishedValueFallback);
 
 		///<summary>
-		/// NavBrand: Hier komt de logo van de website
+		/// MegaNav: nav items
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("navBrand")]
-		public virtual string NavBrand => global::Umbraco.Cms.Web.Common.PublishedModels.Navbar.GetNavBrand(this, _publishedValueFallback);
-
-		///<summary>
-		/// Nav Links: hier komen alle navigatie links van de website
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.3.1+3a269ed3293c8e22bd9a546f424402c0a491964f")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("navLinks")]
-		public virtual global::Umbraco.Cms.Core.Models.Link NavLinks => global::Umbraco.Cms.Web.Common.PublishedModels.Navbar.GetNavLinks(this, _publishedValueFallback);
+		[ImplementPropertyType("megaNav")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Our.Umbraco.Meganav.Models.IMeganavItem> MegaNav => global::Umbraco.Cms.Web.Common.PublishedModels.MegaNavBar.GetMegaNav(this, _publishedValueFallback);
 
 		///<summary>
 		/// Meta Description: Omschrijving van de pagina die gebruikt word voor zoekmachines
