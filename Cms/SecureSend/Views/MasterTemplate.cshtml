@@ -1,5 +1,27 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = null;
+	var homePage = Model.AncestorOrSelf<ContentModels.HomePagina>();
 }
+
+<!DOCTYPE html>
+<html lang="nl">
+    
+<head>
+    @await Html.PartialAsync("MetaData")
+</head>
+    <body>
+      <div class="flex-container" id="container">
+        <div class="pagina-padding">
+      <!-- Dit is de navbar -->
+        @await Html.PartialAsync("topNavigation", homePage)
+        @RenderBody()
+      <!-- Einde van de navbar -->
+      <!-- Begin footer -->
+        @await Html.PartialAsync("Footer", homePage)
+      <!-- Einde footer -->
+      <script src="wwwroot/scripts/script.js"></script>
+    </body>
+</html>

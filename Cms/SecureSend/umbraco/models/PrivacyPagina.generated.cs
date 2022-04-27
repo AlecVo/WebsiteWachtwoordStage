@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Privacy Pagina</summary>
 	[PublishedModel("privacyPagina")]
-	public partial class PrivacyPagina : PublishedContentModel
+	public partial class PrivacyPagina : PublishedContentModel, ISEocontrols
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -48,5 +48,29 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Canonical URL: voeg hier de Canonical url in. Als het leeg is gebruiken we de url van de pagina.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("canonicalURL")]
+		public virtual string CanonicalUrl => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetCanonicalUrl(this, _publishedValueFallback);
+
+		///<summary>
+		/// Meta Description: Vul de meta descriptie voor de pagina in. Dit is wat gezien laat worden in search engines
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("metaDescription")]
+		public virtual string MetaDescription => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaDescription(this, _publishedValueFallback);
+
+		///<summary>
+		/// Meta Title: Vul de titel van de pagina in. Als het blacnk is , gebruiken we pagina titel. Als dat leeg is gebruiken we pagina naam.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("metaTitle")]
+		public virtual string MetaTitle => global::Umbraco.Cms.Web.Common.PublishedModels.SEocontrols.GetMetaTitle(this, _publishedValueFallback);
 	}
 }

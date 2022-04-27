@@ -1,8 +1,10 @@
-﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+﻿@inherits UmbracoViewPage<ContentModels.IFooterControls>
+
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
 
 @if (Model != null)
 {
-    var homePage = (IPublishedContent)Model;
+    var HomePagina = (IPublishedContent)Model;
 
     <footer id="footer" class="flex-container-item">
         <div class="container">
@@ -44,4 +46,5 @@
                 </ul>
               </div>
         </div>
-    </footer> 
+    </footer>
+}
