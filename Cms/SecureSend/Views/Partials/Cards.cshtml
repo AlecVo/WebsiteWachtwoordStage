@@ -1,0 +1,21 @@
+﻿@inherits UmbracoViewPage<ContentModels.HomePagina>
+
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+
+@{ 
+    var cards = Model != null ? Model.Children<ContentModels.Card>().Where(x => x.IsVisible()) : Enumerable.Empty<ContentModels.Project>();
+}
+
+<div class="cards">
+  @if (Model.MainContent != null && Model.MainContent.Any())
+    {
+     foreach (var item in Model.MainContent)
+      {
+       <div class="card">
+        <div class="icon-background"><i class=@Model.Value("iconClass")></i></div>
+        <h5>@Model.Value("title")</h5>
+        <p>@Model.Value("description")</p>
+      </div>
+    }
+}
+</div> 

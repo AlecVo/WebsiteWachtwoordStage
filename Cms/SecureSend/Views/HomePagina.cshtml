@@ -8,32 +8,9 @@
           <div class="hero-parent">
             <div class="hero-item">
               <div>
-                <h1>@Model.Value("title")</h1>
-                <h4>@Model.Value("onderTitle")</h4>
-                @Html.GetBlockListHtml(Model.MainContent)
-                <div class="cards">
-                  <div class="card">
-                    <div class="icon-background"><i class="fas fa-lock"></i></div>
-                    <h5>@Model.Value("cardTitle")</h5>
-                    <p>@Model.Value("cardContent")</p>
-                  </div>
-                  <div class="card">
-                    <div class="icon-background"><i class="far fa-trash-alt"></i></div>
-                    <h5>Verwijder</h5>
-                    <p> optio nihil pariatur nostrum assumenda maxime magni ad doloremque animi. Numquam, molestiae.</p>
-                  </div>
-                  <div class="card">
-                    <div class="icon-background"><i class="fas fa-exchange-alt"></i></div>
-                    <h5>Deel info</h5>
-                    <p> ipsum velit omnis suscipit nihil veniam placeat ratione dolore architecto reiciendis! Cumque repellendus possimus reiciendis.</p>
-                  </div>
-                  <div class="card">
-                    <div class="icon-background"><i class="fas fa-book-open"></i></div>
-                    <h5>Open source</h5>
-                    <p> Qui perferendis doloremque ducimus, tenetur aliquam blanditiis atque ad reiciendis numquam at veritatis.</p>
-                  </div>
-                </div>
-                <div>
+                <h1>@Model.Value("pageTitle")</h1>
+                <h4>@Model.Value("onderTitel")</h4>
+                 @await Html.PartialAsync("mainContent", Model)
                   <a href="#verstuur">
                     <div class="icon-background">
                       <i class="fas fa-arrow-down"></i>    
@@ -55,12 +32,12 @@
                     }
                      <img src='@item.Picture.GetCropUrl()'/>
                   } *@
-                  @{
+                  @* @{
                     foreach (var item in Model.Foto)
                     {
                         <img src="@item.GetCropUrl("foto")" />
                     }
-                }
+                } *@
                 </div>
                   <div class="verstuur-item">
                     <div>
