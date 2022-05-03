@@ -10,9 +10,6 @@
 <nav id="navbar" class="flex-container-item">
     <div class="container">
             <ul>
-                <li class="logo"><a class="nav-link active" href="@Model.Url()">@Model.Name</a></li>
-                @if (pages != null && pages.Any())
-                {
                     <li><a class="navbar-brand logo" href="@Model.Url()">@(Model.SiteName)</a></li>
                     @foreach (var item in pages)
                     {
@@ -21,7 +18,6 @@
                     <li class="burger">
                      @* <a><i @click="burgerToggle()" class="fas fa-bars"></i></a> *@
                     </li>
-                }
             </ul>
     </div>
 </nav>                         
