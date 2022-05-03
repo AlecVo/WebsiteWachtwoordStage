@@ -10,7 +10,10 @@
 <html lang="nl">
     
 <head>
+   <head>
     @await Html.PartialAsync("MetaData")
+    <link rel="stylesheet preload" as="style" href="@Url.Content("~/portfolio-assets/bootstrap.min.css")">
+    <link rel="stylesheet preload" as="style" href="@Url.Content("~/portfolio-assets/ionicons.min.css")">
 </head>
     <body>
       <div class="flex-container" id="container">
