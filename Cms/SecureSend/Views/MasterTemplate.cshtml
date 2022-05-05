@@ -11,17 +11,14 @@
     
 <head>
     @await Html.PartialAsync("MetaData")
+    <link rel="stylesheet" href="/css/home-style.css"></link>
 </head>
     <body>
       <div class="flex-container" id="container">
         <div class="pagina-padding">
-      <!-- Dit is de navbar -->
-        @await Html.PartialAsync("topNavigation", homePage)
-        @RenderBody()
-      <!-- Einde van de navbar -->
-      <!-- Begin footer -->
-        @await Html.PartialAsync("Footer", homePage)
-      <!-- Einde footer -->
+          @await Html.PartialAsync("topNavigation", homePage)
+          @RenderBody()
+          @await Html.PartialAsync("Footer", homePage)
       <script src="wwwroot/scripts/script.js"></script>
     </body>
 </html>

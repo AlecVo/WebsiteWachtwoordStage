@@ -1,16 +1,20 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePagina>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models;
 @{
     Layout = "MasterTemplate.cshtml";
 }
+<head>
+  <link rel="stylesheet" href="/css/home-style.css">
+</head>
 <div id="hero" class="flex-container-item">
           <div class="hero-parent">
             <div class="hero-item">
               <div>
-                <h1>@Model.Value("pageTitle")</h1>
-                <h4>@Model.Value("onderTitel")</h4>
-                 @await Html.PartialAsync("mainContent", Model)
+                <h1>@Model.Value("siteName")</h1>
+                <h4>@Model.Value("onderTitle")</h4>
+                  @* @Html.GetBlockListHtml(Model.MainContent) *@
                   <a href="#verstuur">
                     <div class="icon-background">
                       <i class="fas fa-arrow-down"></i>    
@@ -24,15 +28,15 @@
               <h2>@Model.Value("verstuurTitle")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
-                  @* @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
+                   @* @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
                   {
                     if(item.ShortDescription == null) {
                       <p>tis leeg</p>
                       continue;
                     }
                      <img src='@item.Picture.GetCropUrl()'/>
-                  } *@
-                  @* @{
+                  } 
+                  @{
                     foreach (var item in Model.Foto)
                     {
                         <img src="@item.GetCropUrl("foto")" />
@@ -72,4 +76,4 @@
             </div>
           </div>
         </div>
-        </div>
+      </div>
