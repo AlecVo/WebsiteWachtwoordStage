@@ -1,5 +1,4 @@
-
-    *{
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -117,6 +116,82 @@ nav ul li.burger.hide i:before{
 
 }
 
+/* DLSDSD1
+    #navbar{
+        min-height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+        background-color: #dadada;
+    }
+    .nav-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+        max-width: 100%;
+    }
+    .nav-brand{
+        font-size: 2rem;
+    }
+    .nav-link{
+        transition: 0.4s ease;
+    }
+    .nav-link:hover{
+        background-color: rgb(91, 48, 160);
+        padding: 6px;
+        color: white;
+        border: 2px white solid;
+    }
+    .burger{
+        display: none;
+        cursor: pointer;
+    }
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: black;
+    }
+    @media(max-width:768px){
+        .burger{
+            display: block;
+        }
+        .burger.active .bar:nth-child(2){
+            opacity: 0;
+        }
+        .burger.active .bar:nth-child(1){
+            transform: translateY(8px) rotate(45deg);
+        }
+        .burger.active .bar:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        .nav-menu{
+            position: fixed;
+            top: 70px;
+            gap: 0;
+            flex-direction: column;
+            background-color: #dadada;
+            width: 90%;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .nav-item{
+            margin: 16px 0;
+            display: block;
+        }
+        .nav-menu.active{
+            left: 0;
+        }
+    } */
+
+
+/* Einde styling navbar */
+
 /* Begin styling footer */
 footer{
     background-color: #dadada;
@@ -196,4 +271,3 @@ footer h4, .logo{
     }
   }
 /* Einde styling footer */
-            
