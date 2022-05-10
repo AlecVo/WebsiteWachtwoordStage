@@ -22,13 +22,14 @@
                         @if (item is ContentModels.IconLinkItem)
                         {
                             var linkItem = item as ContentModels.IconLinkItem;
-                            @* <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target" rel="noopener" title="@linkItem.Link.Name" class="bg-primary"><i class="icon (item.Value<string>("icon").ToIconClass())"></i></a> *@
+                            @* <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target" rel="noopener" title="@linkItem.Link.Name" class="bg-primary"><i class="icon @(item.Value<string>("icon").ToIconClass())"></i></a> *@
                         }
                     }
                 </div>
             }
             @if (Model.FooterContentLinks != null && Model.FooterContentLinks.Any())
             {
+            <div class="footer-sitemap">
             <h4>Sitemap :</h4>
                 <div class="links">
                     @foreach (var item in Model.FooterContentLinks)
@@ -36,6 +37,7 @@
                         <a href="@item.Url" target="@item.Target">@item.Name</a>
                     }
                 </div>
+            </div>
             }
               <div class="footer-contact">
                 <h4>Contact Gegevens :</h4>
