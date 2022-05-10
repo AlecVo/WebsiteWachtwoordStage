@@ -12,10 +12,25 @@
     <div class="flex-container" id="container">
       <div class="pagina-padding">
         <section id="privacy">
-          <h1>@Model.Value("title")</h1>
+          <h1>@Model.Value("privacyTitle")</h1>
             <div class="privacy-parent">
               <div class="privacy-item">
-                   @Html.Partial("PrivacyContent", Model)
+                   <div class="privacy-parent">
+                    @if (Model.PrivacyContent != null && Model.PrivacyContent.Any())
+                    {
+                      <h1>@Model.Value("title")</h1>
+                        foreach (var item in Model.PrivacyContent)
+                        {
+                            <div class="privacy-item">
+                                <h2>@Model.Value("title")</h2>
+                                <div class="privacy-verdeelt">
+                                    <p>@Model.Value("linkerContent")<br/><br/></p>
+                                    <p>@Model.Value("rechterContent")</p>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div> 
               </div>
             </div>
         </section>
