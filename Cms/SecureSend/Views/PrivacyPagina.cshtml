@@ -1,28 +1,26 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PrivacyPagina>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PrivacyPagina>;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "MasterTemplate.cshtml";
-}
-<head>
+  <head>
   <link rel="stylesheet" href="/css/privacy-style.css">
-</head>
+ </head>
 
 <body>
     <div class="flex-container" id="container">
       <div class="pagina-padding">
         <section id="privacy">
-          <h1>@Model.Value("privacyTitle")</h1>
+          <h1>@Model.Value("title")</h1>
             <div class="privacy-parent">
               <div class="privacy-item">
                    <div class="privacy-parent">
                     @if (Model.PrivacyContent != null && Model.PrivacyContent.Any())
                     {
-                      <h1>@Model.Value("title")</h1>
                         foreach (var item in Model.PrivacyContent)
                         {
                             <div class="privacy-item">
-                                <h2>@Model.Value("title")</h2>
+                                <h2>@Model.Value("privacyTitle")</h2>
                                 <div class="privacy-verdeelt">
                                     <p>@Model.Value("linkerContent")<br/><br/></p>
                                     <p>@Model.Value("rechterContent")</p>
@@ -37,3 +35,4 @@
        </div>
     </div>
 </body>
+}

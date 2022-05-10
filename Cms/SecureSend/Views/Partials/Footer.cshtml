@@ -1,13 +1,14 @@
 ﻿@inherits UmbracoViewPage<ContentModels.IFooterControls>
 
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
-
+<head>
+    <link rel="stylesheet" href="style.css"></link>
+</head>
 @if (Model != null)
 {
     var HomePagina = (IPublishedContent)Model;
 
     <footer id="footer" class="flex-container-item">
-        <div class="container">
             <div class="footer-logo">
                 <a class="logo" href="Home.html"><i class="fa fa-key logo"> SecureSend</i></a>
                 <p>copyright &copy; 2020</p>
@@ -15,8 +16,9 @@
               </div>
             @if (Model.FooterSocialLinks != null && Model.FooterSocialLinks.Any())
             {
-                <div class="social-follow">
+                <div class="footer-follow">
                     <h4>follow us :</h4>
+                    <div class="social-links">
                     @foreach (var item in Model.FooterSocialLinks)
                     {
                         @if (item is ContentModels.IconLinkItem)
@@ -25,18 +27,19 @@
                             @* <a href="@(linkItem.Link.Url)" target="@linkItem.Link.Target" rel="noopener" title="@linkItem.Link.Name" class="bg-primary"><i class="icon @(item.Value<string>("icon").ToIconClass())"></i></a> *@
                         }
                     }
+                    </div>
                 </div>
             }
             @if (Model.FooterContentLinks != null && Model.FooterContentLinks.Any())
             {
             <div class="footer-sitemap">
             <h4>Sitemap :</h4>
-                <div class="links">
+            <ul>
                     @foreach (var item in Model.FooterContentLinks)
                     {
-                        <a href="@item.Url" target="@item.Target">@item.Name</a>
+                        <li><a href="@item.Url" target="@item.Target">@item.Name</a></li>
                     }
-                </div>
+             </ul>
             </div>
             }
               <div class="footer-contact">
@@ -47,6 +50,5 @@
                     <li>2590 Leopoldlaan 9</li>
                 </ul>
               </div>
-        </div>
     </footer>
 }
