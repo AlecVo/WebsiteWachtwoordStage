@@ -1,11 +1,8 @@
-﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
-
-@using Umbraco.Cms.Web.Common.PublishedModels
-@using System.Collections
-@using Umbraco.Cms.Core.Models
-
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
 @{
-    var cardsRow = (CardsRow)Model.Content;
+    var cardsRow = (ContentModels.CardsRow)Model.Content;
+    var settings = (ContentModels.CardRowSettings)Model.Settings;
 }
 
 <section class="portfolio-block skills">
@@ -33,7 +30,7 @@
                             <div class="card special-skill-item border-0">
                                 @if (!string.IsNullOrWhiteSpace(card.IconClass))
                                 {
-                                    <div class="card-header bg-transparent border-0"><i class="icon @card.IconClass.ToIconClass()"></i></div>
+                                    <div class="card-header bg-transparent border-0"><i class="icon @card.IconClass"></i></div>
                                 }
                                 @if(!string.IsNullOrWhiteSpace(card.Title) || !string.IsNullOrWhiteSpace(card.Description))
                                 {
