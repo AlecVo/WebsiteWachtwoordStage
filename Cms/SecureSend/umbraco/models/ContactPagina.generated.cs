@@ -63,7 +63,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("map")]
-		public virtual string Map => this.Value<string>(_publishedValueFallback, "map");
+		public virtual global::Bergmania.OpenStreetMap.Core.OpenStreetMapModel Map => this.Value<global::Bergmania.OpenStreetMap.Core.OpenStreetMapModel>(_publishedValueFallback, "map");
 
 		///<summary>
 		/// Title: Enter een titel voor dit block

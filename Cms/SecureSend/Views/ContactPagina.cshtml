@@ -9,27 +9,23 @@
 </head>
  <!-- Begin Hero -->
       <div id="contact" class="flex-container-item">
-        <h1>@Model.Value("title")</h1>
-        <div class="contact-parent">
-          <div class="contact-content">
-            <div class="content-info">
-                    @if (Model.ContactContent != null && Model.ContactContent.Any())
-                    {
-                        foreach (var item in Model.ContactContent)
-                        {
-                            <div class="privacy-item">
-                                <h2>@Model.Value("privacyTitle")</h2>
-                                <div class="privacy-verdeelt">
-                                    <p>@Model.Value("linkerContent")<br/><br/></p>
-                                    <p>@Model.Value("rechterContent")</p>
-                                </div>
-                            </div>
-                        }
-                    }
-          </div>
-          <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1305.3764550664323!2d4.436992511063081!3d51.199443780745625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f73ffd805d4b%3A0xb3092ba064f1ee0f!2sBorsbeeksebrug%206%2C%202600%20Antwerpen!5e0!3m2!1snl!2sbe!4v1647599962189!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    
-        </div>
+        <h1>@Model.Title</h1>
+          <div class="contact-parent">
+            <div class="contact-content">
+                      @if (Model.ContactContent != null && Model.ContactContent.Any())
+                      {
+                          foreach (var item in Model.ContactContent)
+                          {
+                              <div class="content-info">
+                                  <h2>@item.Title</h2>
+                                  <p>@item.Text</p>
+                              </div>
+                          }
+                      }
+            </div>
+            <div>
+              
+            </div>   
         </div>
       </div>
       <!-- Einde Hero -->
