@@ -11,7 +11,7 @@
     <div class="flex-container" id="container">
       <div class="pagina-padding">
         <section id="privacy">
-          <h1>@Model.Value("title")</h1>
+          <h1>@Model.Title</h1>
             <div class="privacy-parent">
               <div class="privacy-item">
                    <div class="privacy-parent">
@@ -20,10 +20,9 @@
                         foreach (var item in Model.PrivacyContent)
                         {
                             <div class="privacy-item">
-                                <h2>@Model.Value("privacyTitle")</h2>
+                                <h2>@item.Title</h2>
                                 <div class="privacy-verdeelt">
-                                    <p>@Model.Value("linkerContent")<br/><br/></p>
-                                    <p>@Model.Value("rechterContent")</p>
+                                    @item.Text
                                 </div>
                             </div>
                         }

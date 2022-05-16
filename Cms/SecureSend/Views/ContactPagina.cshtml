@@ -13,9 +13,9 @@
         <div class="contact-parent">
           <div class="contact-content">
             <div class="content-info">
-                    @if (Model.content != null && Model.ContactPagina.Any())
+                    @if (Model.ContactContent != null && Model.ContactContent.Any())
                     {
-                        foreach (var item in Model.ContactPagina)
+                        foreach (var item in Model.ContactContent)
                         {
                             <div class="privacy-item">
                                 <h2>@Model.Value("privacyTitle")</h2>
