@@ -50,6 +50,38 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Area Placeholder: Hier komt de placeholder van de textarea
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("areaPlaceholder")]
+		public virtual string AreaPlaceholder => this.Value<string>(_publishedValueFallback, "areaPlaceholder");
+
+		///<summary>
+		/// Area Titel: Hier komt de titel die u wilt laten tonen boven de text area
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("areaTitel")]
+		public virtual string AreaTitel => this.Value<string>(_publishedValueFallback, "areaTitel");
+
+		///<summary>
+		/// Button Content: Hier komt de content die u in de button wilt laten tonen
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("buttonContent")]
+		public virtual string ButtonContent => this.Value<string>(_publishedValueFallback, "buttonContent");
+
+		///<summary>
+		/// Drop Titel: Hier komt de titel voor de dropdown
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("dropTitel")]
+		public virtual string DropTitel => this.Value<string>(_publishedValueFallback, "dropTitel");
+
+		///<summary>
 		/// Foto: Hier komt de foto die u op de website wilt tonen
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
@@ -72,6 +104,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("sectieTitel")]
 		public virtual string SectieTitel => this.Value<string>(_publishedValueFallback, "sectieTitel");
+
+		///<summary>
+		/// Wachtwoord Titel: Hier komt de titel die u boven het wachtwoord wilt invullen
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("wachtwoordTitel")]
+		public virtual string WachtwoordTitel => this.Value<string>(_publishedValueFallback, "wachtwoordTitel");
 
 		///<summary>
 		/// Footer Content Links

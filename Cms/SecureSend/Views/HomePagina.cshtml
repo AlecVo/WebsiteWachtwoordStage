@@ -25,7 +25,7 @@
             </div>  
           </div>
           <div id="verstuur" class="hero-item">
-              <h2>@Model.Value("verstuurTitle")</h2>
+              <h2>@Model.Value("sectieTitel")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
                    @* @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
@@ -46,11 +46,11 @@
                   <div class="verstuur-item">
                     <div>
                       <div class="bericht">
-                        <h5>@Model.Value("geheimBerichtTitel")</h5>
+                        <h5>@Model.Value("areaTitel")</h5>
                         <textarea placeholder="Vul hier jouw bericht in ..."></textarea>
                       </div>
                       <div class="datum-item">
-                          <h5>@Model.Value("vervalTitel")</h5>
+                          <h5>@Model.Value("dropTitel")</h5>
                           <select name="datum" id="vervalDatum">
                             <option value="druk">Na drukken op link</option>
                             <option value="uur">Na 1 uur</option>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="uitlijning">
                       <input :class="{show:wachtwoord, hide:!wachtwoord}" class="wachtwoord" placeholder="Wachtwoord" type="password">
-                      <button>@Model.Value("creerKnop")</button>
+                      <button>@Model.Value("buttonContent")</button>
                     </div>
                   </div>
               </div>
