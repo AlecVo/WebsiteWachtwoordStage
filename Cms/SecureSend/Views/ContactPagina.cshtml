@@ -12,19 +12,17 @@
         <h1>@Model.Title</h1>
           <div class="contact-parent">
             <div class="contact-content">
-                      @if (Model.ContactContent != null && Model.ContactContent.Any())
-                      {
-                          foreach (var item in Model.ContactContent)
-                          {
-                              <div class="content-info">
-                                  <h2>@item.Title</h2>
-                                  <p>@item.Text</p>
-                              </div>
-                          }
-                      }
-            </div>
-            <div>
-              
+              @if (Model.ContactContent != null && Model.ContactContent.Any())
+              {
+                  foreach (var item in Model.ContactContent)
+                  {
+                      <div class="content-info">
+                          <h2>@item.Title</h2>
+                          <p>@item.Text</p>
+                      </div>
+                  }
+               <div>@Model.Map</div>
+              }
             </div>   
         </div>
       </div>
