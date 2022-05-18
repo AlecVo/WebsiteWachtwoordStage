@@ -28,10 +28,7 @@
               <h2>@Model.Value("sectieTitel")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
-                  @if (Model.Foto is not null)
-                    {
-                        <img src="@Url.GetCropUrl(Model.Foto, height: 300, width: 400)" alt="@Model.Foto.Name" />
-                    }
+                 @await Html.PartialAsync("HomeFoto", Model)
                 </div>
                   <div class="verstuur-item">
                     <div>

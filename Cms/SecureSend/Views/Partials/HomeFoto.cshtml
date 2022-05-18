@@ -1,0 +1,9 @@
+﻿@inherits UmbracoViewPage<ContentModels.HomePagina>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+
+    <div class="container">
+        @if (Model.Foto != null)
+        {
+            <div class="avatar" src = "('@(Model.Foto.GetCropUrl(width: 150, height: 150))')"></div>
+        }
+    </div>
