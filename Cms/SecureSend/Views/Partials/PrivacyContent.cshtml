@@ -1,6 +1,5 @@
-﻿@inherits UmbracoViewPage<ContentModels.PrivacyPagina>
-
-@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+﻿@inherits UmbracoViewPage<ContentModels.PrivacyControls>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 
 <div class="privacy-parent">
     @if (Model.PrivacyContent != null && Model.PrivacyContent.Any())
@@ -8,7 +7,7 @@
         foreach (var item in Model.PrivacyContent)
         {
             <div class="privacy-item">
-                <h2>@Model.Value("privacyTitle")</h2>
+                <h2>@Model.Value("title")</h2>
                 <div class="privacy-verdeelt">
                     <p>@Model.Value("linkerContent")<br/><br/></p>
                     <p>@Model.Value("rechterContent")</p>
@@ -17,3 +16,4 @@
         }
     }
 </div> 
+

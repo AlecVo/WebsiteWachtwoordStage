@@ -18,30 +18,30 @@ using Umbraco.Extensions;
 
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
-	/// <summary>Privacy Content</summary>
-	[PublishedModel("privacyContent")]
-	public partial class PrivacyContent : PublishedElementModel
+	/// <summary>Video</summary>
+	[PublishedModel("umbracoMediaVideo")]
+	public partial class UmbracoMediaVideo : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
-		public new const string ModelTypeAlias = "privacyContent";
+		public new const string ModelTypeAlias = "umbracoMediaVideo";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
-		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		public new const PublishedItemType ModelItemType = PublishedItemType.Media;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		public new static IPublishedContentType GetModelContentType(IPublishedSnapshotAccessor publishedSnapshotAccessor)
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<PrivacyContent, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<UmbracoMediaVideo, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public PrivacyContent(IPublishedElement content, IPublishedValueFallback publishedValueFallback)
+		public UmbracoMediaVideo(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,27 +50,26 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Linker Content: Hier komt de tekst die links word uitgelijnd
+		/// Size: in bytes
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("linkerContent")]
-		public virtual string LinkerContent => this.Value<string>(_publishedValueFallback, "linkerContent");
+		[ImplementPropertyType("umbracoBytes")]
+		public virtual long UmbracoBytes => this.Value<long>(_publishedValueFallback, "umbracoBytes");
 
 		///<summary>
-		/// Privacy Title: Hier komt de title van het onderwerp
+		/// Type
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("privacyTitle")]
-		public virtual string PrivacyTitle => this.Value<string>(_publishedValueFallback, "privacyTitle");
+		[ImplementPropertyType("umbracoExtension")]
+		public virtual string UmbracoExtension => this.Value<string>(_publishedValueFallback, "umbracoExtension");
 
 		///<summary>
-		/// Rechter Content: Hier komt de text die rechts word uitgelijnd
+		/// Video
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("rechterContent")]
-		public virtual string RechterContent => this.Value<string>(_publishedValueFallback, "rechterContent");
+		[ImplementPropertyType("umbracoFile")]
+		public virtual string UmbracoFile => this.Value<string>(_publishedValueFallback, "umbracoFile");
 	}
 }

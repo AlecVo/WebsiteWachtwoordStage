@@ -20,7 +20,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Privacy Pagina</summary>
 	[PublishedModel("privacyPagina")]
-	public partial class PrivacyPagina : PublishedContentModel, IBlockTitleControls, ISEocontrols
+	public partial class PrivacyPagina : PublishedContentModel, IBlockTitleControls, IPrivacyControls, ISEocontrols
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
@@ -50,20 +50,20 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Privacy Content: hier komt de titel en text
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("privacyContent")]
-		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.PrivacyContent> PrivacyContent => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.PrivacyContent>>(_publishedValueFallback, "privacyContent");
-
-		///<summary>
 		/// Title: Enter een titel voor dit block
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("title")]
 		public virtual string Title => global::Umbraco.Cms.Web.Common.PublishedModels.BlockTitleControls.GetTitle(this, _publishedValueFallback);
+
+		///<summary>
+		/// Privacy Content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("privacyContent")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.TitleAndText> PrivacyContent => global::Umbraco.Cms.Web.Common.PublishedModels.PrivacyControls.GetPrivacyContent(this, _publishedValueFallback);
 
 		///<summary>
 		/// Canonical URL: voeg hier de Canonical url in. Als het leeg is gebruiken we de url van de pagina.

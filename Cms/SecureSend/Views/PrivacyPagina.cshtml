@@ -1,24 +1,37 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PrivacyPagina>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PrivacyPagina>;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "MasterTemplate.cshtml";
-}
-<head>
+  <head>
   <link rel="stylesheet" href="/css/privacy-style.css">
-</head>
+ </head>
 
 <body>
     <div class="flex-container" id="container">
       <div class="pagina-padding">
         <section id="privacy">
-          <h1>Privacy Policy</h1>
+          <h1>@Model.Title</h1>
             <div class="privacy-parent">
               <div class="privacy-item">
-                   @await Html.PartialAsync("PrivacyContent", Model)
+                   <div class="privacy-parent">
+                    @if (Model.PrivacyContent != null && Model.PrivacyContent.Any())
+                    {
+                        foreach (var item in Model.PrivacyContent)
+                        {
+                            <div class="privacy-item">
+                                <h2>@item.Title</h2>
+                                <div class="privacy-verdeelt">
+                                    @item.Text
+                                </div>
+                            </div>
+                        }
+                    }
+                </div> 
               </div>
             </div>
         </section>
        </div>
     </div>
 </body>
+}

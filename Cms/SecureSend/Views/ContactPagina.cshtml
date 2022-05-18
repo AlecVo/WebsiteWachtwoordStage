@@ -4,3 +4,28 @@
 @{
 	Layout = "MasterTemplate.cshtml";
 }
+<head>
+	  <link rel="stylesheet" href="/css/contact-style.css"/>
+</head>
+ <!-- Begin Hero -->
+      <div id="contact" class="flex-container-item">
+        <h1>@Model.Title</h1>
+          <div class="contact-parent">
+            <div class="contact-content">
+                      @if (Model.ContactContent != null && Model.ContactContent.Any())
+                      {
+                          foreach (var item in Model.ContactContent)
+                          {
+                              <div class="content-info">
+                                  <h2>@item.Title</h2>
+                                  <p>@item.Text</p>
+                              </div>
+                          }
+                      }
+            </div>
+            <div>
+              
+            </div>   
+        </div>
+      </div>
+      <!-- Einde Hero -->

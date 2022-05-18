@@ -50,6 +50,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Contact content: Hier komt de titel met bijhorende informatie
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("contactContent")]
+		public virtual global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.TitleAndText> ContactContent => this.Value<global::System.Collections.Generic.IEnumerable<global::Umbraco.Cms.Web.Common.PublishedModels.TitleAndText>>(_publishedValueFallback, "contactContent");
+
+		///<summary>
+		/// Map: hier komt de map locatie waar u bevind
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("map")]
+		public virtual global::Bergmania.OpenStreetMap.Core.OpenStreetMapModel Map => this.Value<global::Bergmania.OpenStreetMap.Core.OpenStreetMapModel>(_publishedValueFallback, "map");
+
+		///<summary>
 		/// Title: Enter een titel voor dit block
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]

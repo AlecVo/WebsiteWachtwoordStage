@@ -10,8 +10,11 @@
 <html lang="nl">
     
 <head>
+  @* <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> zou normaal gezien vue mee in het project doen*@ 
+  @* <script src="https://unpkg.com/vue@3.0.2"></script> zou normaal gezien vue mee in het project doen *@
     @await Html.PartialAsync("MetaData")
-    <link rel="stylesheet" href="/css/home-style.css"></link>
+    <link rel="stylesheet" href="style.css"></link>
+    
 </head>
     <body>
       <div class="flex-container" id="container">
@@ -19,6 +22,7 @@
           @await Html.PartialAsync("topNavigation", homePage)
           @RenderBody()
           @await Html.PartialAsync("Footer", homePage)
+          
       <script src="wwwroot/scripts/script.js"></script>
     </body>
 </html>

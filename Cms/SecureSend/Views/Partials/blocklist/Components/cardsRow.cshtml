@@ -1,0 +1,51 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+@{
+    var cardsRow = (ContentModels.CardsRow)Model.Content;
+    var settings = (ContentModels.CardRowSettings)Model.Settings;
+}
+
+<section>
+    <div>
+        @if(!string.IsNullOrWhiteSpace(cardsRow.Title))
+        {
+            <div class="heading">
+                <h2>@cardsRow.Title</h2>
+            </div>
+        }
+        <div class="cards">
+            @if(cardsRow.Cards != null && cardsRow.Cards.Any())
+            {
+                var visibleCards = cardsRow.Cards.Where(x => x.Settings == null
+                || !x.Settings.HasProperty("hide")
+                || !x.Settings.HasValue("hide")
+                || !x.Settings.Value<bool>("hide"));
+
+                if(visibleCards != null && visibleCards.Any())
+                {
+                    <div class="row">
+                        @foreach (var item in cardsRow.Cards)
+                        {
+                            IconCard card = (IconCard)item.Content;
+                            <div class="col-md-4" >
+                                <div class="card special-skill-item border-0">
+                                    @if (!string.IsNullOrWhiteSpace(card.IconClass))
+                                    {
+                                        <div class="card-header bg-transparent border-0", class="icon-background"><i class="icon @card.IconClass"></i></div>
+                                    }
+                                    @if(!string.IsNullOrWhiteSpace(card.Title) || !string.IsNullOrWhiteSpace(card.Description))
+                                    {   
+                                        <div class="card">
+                                            <h3 class="card-title">@card.Title</h3>
+                                            <p class="card-text">@card.Description</p>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
