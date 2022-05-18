@@ -87,7 +87,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "9.4.3+192eb2699ba4131addbb08236f60eb031707f751")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("foto")]
-		public virtual global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue Foto => this.Value<global::Umbraco.Cms.Core.PropertyEditors.ValueConverters.ImageCropperValue>(_publishedValueFallback, "foto");
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Foto => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "foto");
 
 		///<summary>
 		/// Onder Title: Hier komt de text die onder de titele komt

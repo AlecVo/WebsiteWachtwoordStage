@@ -26,7 +26,6 @@
                         @foreach (var item in cardsRow.Cards)
                         {
                             IconCard card = (IconCard)item.Content;
-                            <div class="col-md-4" >
                                 <div class="card special-skill-item border-0">
                                     @if (!string.IsNullOrWhiteSpace(card.IconClass))
                                     {
@@ -40,7 +39,6 @@
                                         </div>
                                     }
                                 </div>
-                            </div>
                         }
                 }
             }

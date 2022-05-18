@@ -28,20 +28,10 @@
               <h2>@Model.Value("sectieTitel")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
-                   @* @foreach (var item in Model.Children.Where(c => c is ISummary).Cast<ISummary>())
-                  {
-                    if(item.ShortDescription == null) {
-                      <p>tis leeg</p>
-                      continue;
-                    }
-                     <img src='@item.Picture.GetCropUrl()'/>
-                  } 
-                  @{
-                    foreach (var item in Model.Foto)
+                  @if (Model.Foto is not null)
                     {
-                        <img src="@item.GetCropUrl("foto")" />
+                        <img src="@Url.GetCropUrl(Model.Foto, height: 300, width: 400)" alt="@Model.Foto.Name" />
                     }
-                } *@
                 </div>
                   <div class="verstuur-item">
                     <div>
