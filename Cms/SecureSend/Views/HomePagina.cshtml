@@ -13,7 +13,7 @@
             <div class="hero-item">
               <div>
                 <h1>@Model.Value("siteName")</h1>
-                <h4>@Model.Value("onderTitle")</h4>
+                <h4 class="onder">@Model.Value("onderTitle")</h4>
                   @Html.GetBlockListHtml(Model.MainContent)
                   <a href="#verstuur">
                     <div class="icon-background">
@@ -28,7 +28,13 @@
               <h2>@Model.Value("sectieTitel")</h2>
               <div class="verstuur-parent">
                 <div class="verstuur-item">
-                  @await Html.PartialAsync("HomeFoto", Model)
+                  @{
+                      var mediaItemToCrop = Umbraco.Media(Guid.Parse("24e867d5-f984-4a3a-a8f8-584f4e53cbfd"));
+                      if (mediaItemToCrop != null)
+                      {
+                          <img src="@Url.GetCropUrl(mediaItemToCrop, "square")" alt="@mediaItemToCrop.Name" width="auto%" height="75%" />
+                      }
+                  }
                 </div>
                   <div class="verstuur-item">
                     <div>
