@@ -22,6 +22,7 @@ img{
     height: auto;
     align-self: center;
     max-height: 500px;
+    margin-bottom: 20px;
 }
 
 p{
@@ -31,7 +32,11 @@ p{
 }
 .col-md-6{
     max-width: 500px;
+    margin: 40px 0;
  }
+ .Right{
+    padding-left: 15%;
+}
 
 @media screen and (max-width: 850px) {
     .overons-item {
@@ -43,5 +48,7 @@ p{
     .mt-3{
         margin-top: 30px;
     }
-}
-        
+    .Right{
+        padding-left: 0px;
+    }
+}    
