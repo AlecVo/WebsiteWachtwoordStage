@@ -29,6 +29,9 @@ p{
    max-width: 400px;
    margin: 15px 0;
 }
+.col-md-6{
+    max-width: 500px;
+ }
 
 @media screen and (max-width: 850px) {
     .overons-item {

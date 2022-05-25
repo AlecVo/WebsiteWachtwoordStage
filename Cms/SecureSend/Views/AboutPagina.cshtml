@@ -9,13 +9,15 @@
 <head>
   <link rel="stylesheet" href="../css/Style.css"></link>
   <link rel="stylesheet" href="../css/overons-style.css"></link>
+  <link rel="stylesheet" href="../css/bootstrap-grid.css"></link>
 </head>
 
 <body>
     <header id="overons" class="flex-container-item">
       <h1>@Model.Value("title")</h1>
       <div class="overons-parent">
-        <div class="overons-item">
+        @Html.GetGridHtml(Model, "grid", "bootstrap3")
+        @* <div class="overons-item">
           <div>
             <h2>Wat is SecureSend?</h2>
             <p>SecureSend is een website die ervoor zorgt dat men gegevens veilig kan doorsturen. Het is opgericht omdat er weinig veilige websites zijn waar je gegevens veilig kunt doorsturen.</p>
@@ -44,7 +46,7 @@
             <h2>Wat is SecureSend's doel?</h2>
             <p>Ons doel is om volwassenen een manier te geven om berichten/wachtwoorden/gegevens wereldwijd veilig met elkaar te delen.</p>
           </div>
-        </div>
+        </div> *@
       </div>
     </header>
 </body>
